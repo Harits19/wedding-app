@@ -1,21 +1,10 @@
 
 paths:
-  /pet:
-    put:
-      requestBody:
-        description: Update an existent pet in the store
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/Pet"
-        required: true
+  /whitelist:
+    get:
       responses:
         "200":
           description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Pet"
 components:
   schemas:
     Category:
