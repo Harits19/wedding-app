@@ -2,11 +2,6 @@
 paths:
   /pet:
     put:
-      tags:
-        - pet
-      summary: Update an existing pet
-      description: Update an existing pet by Id
-      operationId: updatePet
       requestBody:
         description: Update an existent pet in the store
         content:
@@ -21,16 +16,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Pet"
-        "400":
-          description: Invalid ID supplied
-        "404":
-          description: Pet not found
-        "422":
-          description: Validation exception
-
 components:
   schemas:
-    
     Category:
       type: object
       properties:
