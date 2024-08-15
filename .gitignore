@@ -1,1 +1,4 @@
 wedding-invitation-app-express/node_modules/*
+wedding-invitation-app-express/dist/*
+wedding-invitation-app-react/node_modules/*
+
