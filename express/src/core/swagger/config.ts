@@ -1,4 +1,4 @@
-import swaggerJsdoc from "swagger-jsdoc";
+import swaggerJsdoc, { OAS3Options } from "swagger-jsdoc";
 import { env } from "../env/config";
 
 export const swaggerConfig = swaggerJsdoc({
@@ -13,6 +13,15 @@ export const swaggerConfig = swaggerJsdoc({
         url: `${env.APP_HOST}:${env.APP_PORT}`,
       },
     ],
+    components: {
+      securitySchemes: {
+        token: {
+          type: "apiKey",
+          name: "token",
+          in: "header",
+        },
+      },
+    },
   },
-  apis: ["*/*/*.yaml"],
-});
+  apis: ["*/*/*/*.yaml"],
+} as OAS3Options);

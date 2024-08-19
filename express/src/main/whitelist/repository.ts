@@ -48,10 +48,14 @@ export const update = async (
 };
 
 export const deleteById = async (id: number) => {
-  await db
+  const result = await db
     .table(tableName)
     .where({
       id,
     })
     .del();
+  console.log("result delete", result);
+  if (result === 0) {
+    throw new Error(`id ${id} doesn't exist`);
+  }
 };

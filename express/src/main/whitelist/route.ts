@@ -1,7 +1,7 @@
 import express from "express";
-import { getAll, insert } from "./repository";
+import { deleteById, getAll, insert, update } from "./repository";
 import { printResponse } from "../../core/express/response";
-import { WhitelistArrayValidator } from "./model";
+import { WhitelistArrayValidator, WhitelistValidator } from "./model";
 import { verifyToken } from "../../core/token/config";
 
 export const whitelistRoute = () => {
@@ -18,11 +18,37 @@ export const whitelistRoute = () => {
 
   route.post("", verifyToken, async (req, res, next) => {
     try {
-      const body = await req.body;
+      const body = req.body;
 
       const whitelist = WhitelistArrayValidator.parse(body);
 
       await insert(whitelist);
+      return printResponse(res, whitelist);
+    } catch (error) {
+      next(error);
+    }
+  });
+
+  route.delete("/:id", verifyToken, async (req, res, next) => {
+    try {
+      const id = Number(req.params.id);
+      await deleteById(id);
+      return printResponse(res, id);
+    } catch (error) {
+      next(error);
+    }
+  });
+
+  route.put("/:id", verifyToken, async (req, res, next) => {
+    try {
+      const id = Number(req.params.id);
+
+      const body = req.body;
+
+      const whitelist = WhitelistValidator.parse(body);
+
+      await update({ ...whitelist, id });
+
       return printResponse(res, whitelist);
     } catch (error) {
       next(error);
