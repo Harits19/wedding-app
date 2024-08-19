@@ -1,15 +1,16 @@
 import swaggerJsdoc from "swagger-jsdoc";
+import { env } from "../env/config";
 
 export const swaggerConfig = swaggerJsdoc({
   definition: {
     openapi: "3.1.0",
     info: {
-      title: "1engage Express API with Swagger",
-      version: process.env.APP_VERSION || "1.0.0",
+      title: "Wedding Express",
+      version: "1.0.0",
     },
     servers: [
       {
-        url: "http://localhost:3000",
+        url: `${env.APP_HOST}:${env.APP_PORT}`,
       },
     ],
   },

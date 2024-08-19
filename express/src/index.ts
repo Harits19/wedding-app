@@ -4,11 +4,13 @@ import swaggerUi from "swagger-ui-express";
 import { swaggerConfig } from "./swagger/config";
 import { env } from "./env/config";
 import { checkConnection, mysql } from "./knex/config";
+import { hostname } from "os";
 
 const startExpress = () => {
   const app = express();
 
-  const port = process.env.PORT || 8080;
+  const port = env.APP_PORT;
+  const host = env.APP_HOST;
 
   app.get("/", (req: Request, res: Response) => {
     res.send("Healthy Check");
@@ -18,7 +20,7 @@ const startExpress = () => {
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 
   app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at ${host}:${port}`);
   });
 };
 
