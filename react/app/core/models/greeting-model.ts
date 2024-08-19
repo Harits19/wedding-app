@@ -1,11 +1,6 @@
-import zod from "zod";
-
-export const GreetingValidator = zod.object({
-  name: zod.string(),
-  message: zod.string(),
-});
-
-export interface GreetingModel extends zod.infer<typeof GreetingValidator> {
+export interface GreetingModel {
   id?: number;
   createdAt?: Date;
+  name: string;
+  message: string;
 }
