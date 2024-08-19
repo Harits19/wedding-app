@@ -1,0 +1,24 @@
+paths:
+  /greeting:
+    get:
+      responses:
+        "200":
+          description: Successful operation
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  required: true
+                  example: harits
+                message:
+                  type: string
+                  required: true
+                  example: Congrats
+      responses:
+        "200":
+          description: Successful operation

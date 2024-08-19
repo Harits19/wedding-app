@@ -7,6 +7,8 @@ import { env } from "./core/env/config";
 import { checkConnection } from "./core/knex/config";
 import * as AttendanceRepository from "./main/attendance/repository";
 import * as WhitelistRepository from "./main/whitelist/repository";
+import * as GreetingRepository from "./main/greeting/repository";
+import { greetingRoute } from "./main/greeting/route";
 
 const startExpress = () => {
   const app = express();
@@ -22,6 +24,7 @@ const startExpress = () => {
 
   app.use("/whitelist", whitelistRoute());
   app.use("/attendance", attendanceRoute());
+  app.use("/greeting", greetingRoute());
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 
   function errorHandler(
@@ -46,5 +49,6 @@ const startExpress = () => {
   await checkConnection();
   await AttendanceRepository.initialize();
   await WhitelistRepository.initialize();
+  await GreetingRepository.initialize();
   startExpress();
 })();
