@@ -1,6 +1,6 @@
 import express from "express";
 import { getAll, insert } from "./repository";
-import { printResponse } from "../core/express/response";
+import { printResponse } from "../../core/express/response";
 import { AttendanceValidator } from "./model";
 
 export const attendanceRoute = () => {

@@ -1,12 +1,12 @@
-import { attendanceRoute } from "./attendance/route";
+import { attendanceRoute } from "./main/attendance/route";
 import express, { NextFunction, Request, Response } from "express";
-import { whitelistRoute } from "./whitelist/route";
+import { whitelistRoute } from "./main/whitelist/route";
 import swaggerUi from "swagger-ui-express";
 import { swaggerConfig } from "./core/swagger/config";
 import { env } from "./core/env/config";
-import { checkConnection, mysql } from "./core/knex/config";
-import * as AttendanceRepository from "./attendance/repository";
-import * as WhitelistRepository from "./whitelist/repository";
+import { checkConnection } from "./core/knex/config";
+import * as AttendanceRepository from "./main/attendance/repository";
+import * as WhitelistRepository from "./main/whitelist/repository";
 
 const startExpress = () => {
   const app = express();
