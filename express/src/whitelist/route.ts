@@ -1,8 +1,8 @@
 import express from "express";
 import { getAll, insert } from "./repository";
-import { printResponse } from "../express/response";
+import { printResponse } from "../core/express/response";
 import { WhitelistArrayValidator } from "./model";
-import { verifyToken } from "../token/config";
+import { verifyToken } from "../core/token/config";
 
 export const whitelistRoute = () => {
   const route = express.Router();

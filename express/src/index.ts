@@ -2,9 +2,9 @@ import { attendanceRoute } from "./attendance/route";
 import express, { NextFunction, Request, Response } from "express";
 import { whitelistRoute } from "./whitelist/route";
 import swaggerUi from "swagger-ui-express";
-import { swaggerConfig } from "./swagger/config";
-import { env } from "./env/config";
-import { checkConnection, mysql } from "./knex/config";
+import { swaggerConfig } from "./core/swagger/config";
+import { env } from "./core/env/config";
+import { checkConnection, mysql } from "./core/knex/config";
 import * as AttendanceRepository from "./attendance/repository";
 import * as WhitelistRepository from "./whitelist/repository";
 

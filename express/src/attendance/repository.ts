@@ -1,4 +1,4 @@
-import { initTable, mysql } from "../knex/config";
+import { initTable, mysql } from "../core/knex/config";
 import { AttendanceModel, attendanceTypeList } from "./model";
 
 const tableName = "attendance";
