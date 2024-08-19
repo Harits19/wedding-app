@@ -1,0 +1,27 @@
+paths:
+  /attendance:
+    get:
+      responses:
+        "200":
+          description: Successful operation
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: harits
+                  required: true
+                attendance:
+                  type: string
+                  default: not_sure
+                  enum: 
+                    - not_sure
+                    - attend
+                    - not_attend
+      responses:
+        "200":
+          description: Successful operation

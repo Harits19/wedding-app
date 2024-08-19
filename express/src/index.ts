@@ -1,13 +1,16 @@
+import { attendanceRoute } from "./attendance/route";
 import express, { Request, Response } from "express";
 import { whitelistRoute } from "./whitelist/route";
 import swaggerUi from "swagger-ui-express";
 import { swaggerConfig } from "./swagger/config";
 import { env } from "./env/config";
 import { checkConnection, mysql } from "./knex/config";
-import { hostname } from "os";
+import { initialize } from "./attendance/repository";
 
 const startExpress = () => {
   const app = express();
+
+  app.use(express.json());
 
   const port = env.APP_PORT;
   const host = env.APP_HOST;
@@ -17,6 +20,7 @@ const startExpress = () => {
   });
 
   app.use("/whitelist", whitelistRoute());
+  app.use("/attendance", attendanceRoute());
   app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 
   app.listen(port, () => {
@@ -26,5 +30,6 @@ const startExpress = () => {
 
 (async () => {
   await checkConnection();
+  await initialize();
   startExpress();
 })();

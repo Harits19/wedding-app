@@ -24,13 +24,10 @@ export const checkConnection = async () => {
   }
 };
 
-export const initTable = async ({
-  tableName,
-  createTableCallback,
-}: {
-  tableName: string;
-  createTableCallback: (table: Knex.CreateTableBuilder) => void;
-}) => {
+export const initTable = async (
+  tableName: string,
+  createTableCallback: (table: Knex.CreateTableBuilder) => void
+) => {
   try {
     const result = await mysql.schema.createTable(
       tableName,

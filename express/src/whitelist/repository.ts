@@ -5,12 +5,9 @@ const tableName = "whitelist";
 const db = mysql;
 
 export const initialize = async () => {
-  await initTable({
-    tableName: tableName,
-    createTableCallback: (table) => {
-      table.increments("id");
-      table.string("name");
-    },
+  await initTable(tableName, (table) => {
+    table.increments("id");
+    table.string("name");
   });
 
   try {
