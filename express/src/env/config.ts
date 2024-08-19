@@ -16,6 +16,7 @@ const envList = [
   "MYSQL_HOST",
   "APP_PORT",
   "APP_HOST",
+  "TOKEN",
 ] as const;
 
 type EnvType = (typeof envList)[number];

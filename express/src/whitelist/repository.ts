@@ -8,15 +8,8 @@ export const initialize = async () => {
   await initTable(tableName, (table) => {
     table.increments("id");
     table.string("name");
+    table.date("createdAt");
   });
-
-  try {
-    await mysql.schema.alterTable(tableName, (table) => {
-      table.date("createdAt");
-    });
-  } catch (error) {
-    console.log("error when alter table", error);
-  }
 };
 
 export const getAll = async () => {

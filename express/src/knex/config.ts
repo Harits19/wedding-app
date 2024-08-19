@@ -34,7 +34,11 @@ export const initTable = async (
       createTableCallback
     );
     console.log(`success initialize ${tableName} table ${result}`);
-  } catch (error) {
+  } catch (error: any) {
+    const code = error?.code;
+    if (code === "ER_TABLE_EXISTS_ERROR") {
+      return;
+    }
     console.error("error when create table", error);
   }
 };
