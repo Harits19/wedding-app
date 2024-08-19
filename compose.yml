@@ -1,7 +1,7 @@
 
 services:
 
-  backend:
+  express:
     build:
       context: ./
       target: express-dev
@@ -9,27 +9,27 @@ services:
       MYSQL_HOST: mysql
       MYSQL_USER: root
       MYSQL_PASSWORD: secret
-      MYSQL_DB: todos
+      MYSQL_DB: wedding
     ports:
       - 8080:8080
     develop:
       watch:
-        - path: ./wedding-invitation-app-express/src
+        - path: ./express/src
           action: rebuild
           target: /usr/local/app/src
-        - path: ./wedding-invitation-app-express/package.json
+        - path: ./express/package.json
           action: rebuild
 
-  client:
+  react:
     build:
       context: ./
       target: react-dev
     develop:
       watch:
-        - path: ./wedding-invitation-app-react/src
+        - path: ./react/src
           action: sync
           target: /usr/local/app/src
-        - path: ./wedding-invitation-app-react/package.json
+        - path: ./react/package.json
           action: rebuild
     ports:
       - 3000:3000
@@ -37,12 +37,12 @@ services:
   mysql:
     image: mysql:8.0
     volumes:
-      - todo-mysql-data:/var/lib/mysql
+      - wedding-mysql-data:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: todos
+      MYSQL_DATABASE: wedding
 
   phpmyadmin:
     image: phpmyadmin
@@ -54,4 +54,4 @@ services:
       - 80:80
       
 volumes:
-  todo-mysql-data:
+  wedding-mysql-data:

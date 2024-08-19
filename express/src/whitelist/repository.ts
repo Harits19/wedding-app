@@ -1,8 +1,8 @@
-import { initTable, knexConnection } from "../knex/config";
+import { initTable, mysql } from "../knex/config";
 import { WhitelistModel } from "./model";
 
 const tableName = "whitelist";
-const db = knexConnection;
+const db = mysql;
 
 export const initialize = async () => {
   await initTable({
@@ -14,7 +14,7 @@ export const initialize = async () => {
   });
 
   try {
-    await knexConnection.schema.alterTable(tableName, (table) => {
+    await mysql.schema.alterTable(tableName, (table) => {
       table.date("createdAt");
     });
   } catch (error) {

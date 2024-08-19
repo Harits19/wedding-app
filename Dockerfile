@@ -16,7 +16,7 @@ WORKDIR /usr/local/app
 # since there are common steps needed for each.
 ###################################################
 FROM base AS react-base
-COPY wedding-invitation-app-react ./
+COPY react ./
 RUN --mount=type=cache,id=npm,target=/usr/local/share/.cache/npm \
     npm install
 
@@ -49,7 +49,7 @@ RUN npm run build
 # there are common steps needed for each.
 ###################################################
 FROM base AS express-dev
-COPY wedding-invitation-app-express ./
+COPY express ./
 RUN --mount=type=cache,id=npm,target=/usr/local/share/.cache/npm \
     npm install
 CMD ["npm", "run", "start"]
