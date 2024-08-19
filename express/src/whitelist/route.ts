@@ -1,12 +1,13 @@
 import express from "express";
 import { getAll } from "./repository";
+import { printResponse } from "../express/response";
 
 export const whitelistRoute = () => {
   const route = express.Router();
   route.get("", async (req, res) => {
     const result = await getAll();
 
-    res.json(result);
+    return printResponse(res, result);
   });
 
   return route;
