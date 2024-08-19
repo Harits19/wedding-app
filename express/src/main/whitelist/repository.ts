@@ -1,4 +1,4 @@
-import { initTable, mysql } from "../core/knex/config";
+import { initTable, mysql } from "../../core/knex/config";
 import { WhitelistModel } from "./model";
 
 const tableName = "whitelist";
