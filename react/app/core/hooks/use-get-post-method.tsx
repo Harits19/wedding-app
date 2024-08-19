@@ -30,7 +30,7 @@ export const useGetAndPostMethod = <
     return fetch<unknown, BaseResponse<BaseModel[]>>({
       url,
       method: "GET",
-    }).then((value) => value.data);
+    }).then((value) => value?.data);
   });
 
   const del = useSWRMutation(url, function (_, { arg }: { arg: BaseModel }) {

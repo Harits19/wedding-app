@@ -7,7 +7,7 @@ import { FaRegEnvelopeOpen } from "react-icons/fa";
 import ButtonBrown from "../button-brown";
 
 export default function CoverPage() {
-  const { weddingDate, ...kText } = useText();
+  const { weddingDate, ...text } = useText();
   const guest = useGuest();
   const { setShowCover, showCover } = useWeddingState();
   const RenderName = ({ text }: { text: string }) => {
@@ -60,21 +60,21 @@ export default function CoverPage() {
 
       <div className="absolute text-wedprimary-color top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center">
         <div className="animate-top-bottom-fade flex flex-col items-center">
-          <span className="font-arizona  text-xl">{kText.theWeddingOf}</span>
-          <RenderName text={kText.brideName} />
-          <div className="font-arizona text-[32px] -my-2">{kText.and}</div>
-          <RenderName text={kText.groomName} />
+          <span className="font-arizona  text-xl">{text.theWeddingOf}</span>
+          <RenderName text={text.brideName} />
+          <div className="font-arizona text-[32px] -my-2">{text.and}</div>
+          <RenderName text={text.groomName} />
         </div>
 
         <div className=" animate-fade-in my-6">{weddingDate}</div>
 
         <div className="animate-bottom-top-fade flex flex-col items-center">
-          <div className="animate-fade-in-bottom-top">{kText.kepadaYth}</div>
+          <div className="animate-fade-in-bottom-top">{text.kepadaYth}</div>
           <div className="animate-fade-in-bottom-top">
-            {kText.bapakIbuSaudara}
+            {text.bapakIbuSaudara}
           </div>
           <div className="text-[11px] font-normal px-4 leading">
-            {kText.mohonMaafJikaAdaKesalahanPenulisanNama}
+            {text.mohonMaafJikaAdaKesalahanPenulisanNama}
           </div>
           <div className="h-4" />
 
@@ -89,7 +89,7 @@ export default function CoverPage() {
             }}
           >
             <FaRegEnvelopeOpen />
-            {kText.bukaUndangan}
+            {text.bukaUndangan}
           </ButtonBrown>
         </div>
       </div>

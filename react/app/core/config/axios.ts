@@ -16,6 +16,10 @@ export function useCatchError() {
       }
 
       console.error("Unexpected Error : ", error);
+      toast({
+        title: "Unexpected Error",
+        description: error?.toString() || JSON.stringify(error),
+      });
     },
   };
 }
@@ -39,7 +43,6 @@ export function useAxios() {
       return result;
     } catch (error) {
       handleError(error);
-      throw error;
     }
   };
 
