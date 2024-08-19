@@ -1,5 +1,5 @@
 import express from "express";
-import { deleteById, getAll, insert, update } from "./repository";
+import { deleteById, findByName, getAll, insert, update } from "./repository";
 import { printResponse } from "../../core/express/response";
 import { WhitelistArrayValidator, WhitelistValidator } from "./model";
 import { verifyToken } from "../../core/token/config";
@@ -50,6 +50,16 @@ export const whitelistRoute = () => {
       await update({ ...whitelist, id });
 
       return printResponse(res, whitelist);
+    } catch (error) {
+      next(error);
+    }
+  });
+
+  route.get("/name/:name", async (req, res, next) => {
+    try {
+      const name = req.params.name;
+      const result = await findByName(name);
+      return printResponse(res, result);
     } catch (error) {
       next(error);
     }

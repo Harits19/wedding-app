@@ -25,6 +25,10 @@ export const findByName = async (name: string) => {
     })
     .select()
     .first();
+
+  if (!result) {
+    throw new Error(`${name} not found`);
+  }
   return result;
 };
 
