@@ -15,12 +15,25 @@ services:
       NODE_ENV: production
     ports:
       - 8080:8080
+    develop:
+      watch:
+        - path: ./express/src
+          action: rebuild
+          target: /usr/local/app/src
+        - path: ./express/package.json
+          action: rebuild
 
   react:
     build:
       context: ./
       target: react-dev
-
+    develop:
+      watch:
+        - path: ./react/src
+          action: sync
+          target: /usr/local/app/src
+        - path: ./react/package.json
+          action: rebuild
     ports:
       - 3000:3000
 
