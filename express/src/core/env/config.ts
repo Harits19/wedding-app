@@ -2,12 +2,12 @@ import dotenv from "dotenv";
 import path from "path";
 
 const envPath = path.join("../.env");
-
-console.log({ envPath });
-
-dotenv.config({
-  path: envPath,
-});
+const isProduction = process.env.NODE_ENV === "production";
+if (!isProduction) {
+  dotenv.config({
+    path: envPath,
+  });
+}
 
 const envList = [
   "MYSQL_ROOT_PASSWORD",

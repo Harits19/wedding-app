@@ -16,10 +16,6 @@ export function useCatchError() {
       }
 
       console.error("Unexpected Error : ", error);
-      toast({
-        title: "Unexpected Error",
-        description: error?.toString() || JSON.stringify(error),
-      });
     },
   };
 }
@@ -34,6 +30,7 @@ export function useAxios() {
     try {
       const result = await instance<Response>({
         ...params,
+        baseURL: "http://localhost:8080",
         headers: {
           token,
           ...params.headers,

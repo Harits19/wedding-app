@@ -3,6 +3,6 @@ import { useGetAndPostMethod } from "./use-get-post-method";
 
 export const useAttendance = () => {
   return useGetAndPostMethod<AttendanceModel>({
-    url: "/api/attendance",
+    url: "/attendance",
   });
 };

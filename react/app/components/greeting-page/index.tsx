@@ -54,7 +54,6 @@ export default function GreetingPage() {
               <Input
                 value={nameForm.field.value}
                 placeholder={text.silahkanIsiNamaAnda}
-                defaultValue={name}
                 onChange={nameForm.field.onChange}
                 className={inputClassName}
                 info={nameForm.fieldState.error?.message}

@@ -5,7 +5,7 @@ import { BaseResponse } from "../models/base-response";
 import useSWRMutation from "swr/mutation";
 import { useAxios } from "../config/axios";
 
-const url = "/api/whitelist";
+const url = "/whitelist";
 
 export const useWhitelist = () => {
   const { fetch } = useAxios();
@@ -25,7 +25,7 @@ export const useWhitelist = () => {
     return fetch<unknown, BaseResponse<WhitelistModel[]>>({
       url,
       method: "GET",
-    }).then((value) => value.data);
+    }).then((value) => value?.data);
   });
 
   const del = useSWRMutation(

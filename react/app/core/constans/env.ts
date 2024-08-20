@@ -1,7 +1,8 @@
 export const kEnv = (() => {
   const env = {
-    DEVELOPE_MODE: process.env.DEVELOPE_MODE === "true",
+    DEVELOPE_MODE: true,
   };
+
   const emptyKey = Object.entries(env).filter((key) => {
     return !key;
   });

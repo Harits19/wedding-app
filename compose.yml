@@ -1,15 +1,18 @@
-
 services:
-
   express:
     build:
       context: ./
       target: express-dev
     environment:
-      MYSQL_HOST: mysql
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: wedding
       MYSQL_USER: root
-      MYSQL_PASSWORD: secret
-      MYSQL_DB: wedding
+      MYSQL_HOST: mysql
+      APP_PORT: 8080
+      APP_HOST: http://localhost
+      TOKEN: prambanan1
+      DEVELOPE_MODE: true
+      NODE_ENV: production
     ports:
       - 8080:8080
     develop:
@@ -52,6 +55,6 @@ services:
       PMA_PASSWORD: secret
     ports:
       - 80:80
-      
+
 volumes:
   wedding-mysql-data:
