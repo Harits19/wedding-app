@@ -9,11 +9,13 @@ import * as AttendanceRepository from "./main/attendance/repository";
 import * as WhitelistRepository from "./main/whitelist/repository";
 import * as GreetingRepository from "./main/greeting/repository";
 import { greetingRoute } from "./main/greeting/route";
+import cors from "cors";
 
 const startExpress = () => {
   const app = express();
 
   app.use(express.json());
+  app.use(cors());
 
   const port = env.APP_PORT;
   const host = env.APP_HOST;
