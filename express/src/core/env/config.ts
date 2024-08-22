@@ -3,7 +3,7 @@ import path from "path";
 
 const isProduction = process.env.NODE_ENV === "production";
 dotenv.config({
-  path: isProduction ? path.join("../.env") : path.join(".env"),
+  path: !isProduction ? path.join("../.env") : path.join(".env"),
 });
 
 const envList = [
