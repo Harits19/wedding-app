@@ -8,18 +8,18 @@ WORKDIR /app
 
 
 # Copy the rest of the application code to the container
-COPY react/. .
+COPY react .
 COPY .env .env
 
 # Install dependencies
-RUN npm install
+RUN yarn install
 
 # Build the application
-RUN npm run build
+RUN yarn build
 
 # Expose port 3000
 EXPOSE 3000
 ENV PORT=3000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
