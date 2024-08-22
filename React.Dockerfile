@@ -1,31 +1,13 @@
 FROM node:18-alpine AS base
 
-FROM base AS deps
+FROM base AS react-prod
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY react/package.json react/package-lock.json* ./
-RUN npm ci
-
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY react/. .
 COPY .env .env
+RUN npm ci
 RUN npm run build
-
-# Production image, copy all the files and run next
-FROM base AS react-prod
-WORKDIR /app
 ENV NODE_ENV production
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-COPY --from=builder /app/public ./public
-RUN mkdir .next
-RUN chown nextjs:nodejs .next
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-COPY --from=builder --chown=nextjs:nodejs /app/.env .env
-USER nextjs
 EXPOSE 3000
 ENV PORT 3000
-CMD HOSTNAME="0.0.0.0" node server.js
+CMD npm start
