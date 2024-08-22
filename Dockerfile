@@ -17,8 +17,7 @@ WORKDIR /usr/local/app
 ###################################################
 FROM base AS react-base
 COPY react ./
-RUN --mount=type=cache,id=npm,target=/usr/local/share/.cache/npm \
-    npm install
+RUN npm install
 
 ###################################################
 # Stage: react-dev
@@ -50,8 +49,7 @@ RUN npm run build
 ###################################################
 FROM base AS express-dev
 COPY express ./
-RUN --mount=type=cache,id=npm,target=/usr/local/share/.cache/npm \
-    npm install
+RUN npm install
 CMD ["npm", "run", "start"]
 
 ###################################################
