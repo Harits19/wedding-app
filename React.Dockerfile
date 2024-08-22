@@ -1,6 +1,6 @@
 FROM node:18-alpine AS base
 
-FROM base AS rect-prod
+FROM base AS react-prod
 ENV NODE_ENV production
 
 WORKDIR /app
