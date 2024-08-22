@@ -28,10 +28,11 @@ export function useAxios() {
     params: AxiosRequestConfig<Data>,
   ) => {
     const instance = axios.create();
+    const baseURL = `${kEnv.NEXT_PUBLIC_APP_HOST}:${kEnv.NEXT_PUBLIC_APP_PORT}`;
     try {
       const result = await instance<Response>({
         ...params,
-        baseURL: `${kEnv.NEXT_PUBLIC_APP_HOST}:${kEnv.NEXT_PUBLIC_APP_PORT}`,
+        baseURL,
         headers: {
           token,
           ...params.headers,

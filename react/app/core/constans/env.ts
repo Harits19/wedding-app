@@ -1,14 +1,3 @@
-import path from "path";
-import dotenv from "dotenv";
-
-const envPath = path.join("../.env");
-const isProduction = process.env.NODE_ENV === "production";
-if (!isProduction) {
-  dotenv.config({
-    path: envPath,
-  });
-}
-
 export const kEnv = (() => {
   const env = {
     DEVELOPE_MODE: true,

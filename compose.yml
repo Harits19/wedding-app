@@ -2,7 +2,7 @@ services:
   express:
     build:
       context: ./
-      target: express-dev
+      target: express
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
@@ -19,7 +19,7 @@ services:
   react:
     build:
       context: ./
-      target: react-dev
+      target: react
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
