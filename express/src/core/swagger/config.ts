@@ -23,5 +23,5 @@ export const swaggerConfig = swaggerJsdoc({
       },
     },
   },
-  apis: ["*/*/*/*.yaml"],
+  apis: ["*/*/swagger/*.yaml"],
 } as OAS3Options);

@@ -8,6 +8,9 @@ services:
       NODE_ENV: production
     ports:
       - 8080:8080
+    depends_on:
+      mysql:
+        condition: service_healthy
 
   react:
     build:
@@ -26,6 +29,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
+    healthcheck:
+      test: "exit 0"
 
   phpmyadmin:
     image: phpmyadmin
