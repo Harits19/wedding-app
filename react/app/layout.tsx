@@ -17,7 +17,7 @@ import { Toaster } from "./components/ui/toaster";
 import { TokenProvider } from "./core/hooks/use-token";
 
 export const metadata: Metadata = {
-  title: kEnv.DEVELOPE_MODE ? "Dummy" : "The Wedding of Harits & Fia",
+  title: kEnv.NEXT_PUBLIC_DEVELOPE_MODE ? "Dummy" : "The Wedding of Harits & Fia",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

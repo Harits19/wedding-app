@@ -8,7 +8,7 @@ export const kPublic = {
   flower5: "/images/flower5.png",
 
   backgroundMusic: "/audio/background-music.webm",
-  brideGroom1: kEnv.DEVELOPE_MODE
+  brideGroom1: kEnv.NEXT_PUBLIC_DEVELOPE_MODE
     ? "/images/bride-groom1-dummy.jpeg"
     : "/images/bride-groom1.jpeg",
   sideFlower1: "/images/side-flower1.png",

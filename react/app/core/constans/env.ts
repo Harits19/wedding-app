@@ -1,6 +1,6 @@
 export const kEnv = (() => {
   const env = {
-    DEVELOPE_MODE: true,
+    NEXT_PUBLIC_DEVELOPE_MODE: process.env.NEXT_PUBLIC_DEVELOPE_MODE === "true",
     NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
     NEXT_PUBLIC_APP_PORT: process.env.NEXT_PUBLIC_APP_PORT,
   };

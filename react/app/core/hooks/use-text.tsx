@@ -156,6 +156,6 @@ export const useText = () => {
     googleCalendarLink:
       "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
     saveToCalendar: "Save To Calendar",
-    ...(kEnv.DEVELOPE_MODE ? dummyData : {}),
+    ...(kEnv.NEXT_PUBLIC_DEVELOPE_MODE ? dummyData : {}),
   };
 };
