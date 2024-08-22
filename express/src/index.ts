@@ -18,7 +18,7 @@ const startExpress = () => {
   app.use(cors());
 
   const port = env.APP_PORT;
-  const host = env.APP_HOST;
+  const host = env.NEXT_PUBLIC_APP_HOST;
 
   app.get("/", (req: Request, res: Response) => {
     res.send("Healthy Check");

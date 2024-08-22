@@ -15,7 +15,7 @@ const envList = [
   "MYSQL_USER",
   "MYSQL_HOST",
   "APP_PORT",
-  "APP_HOST",
+  "NEXT_PUBLIC_APP_HOST",
   "TOKEN",
 ] as const;
 

@@ -9,7 +9,7 @@ services:
       MYSQL_USER: root
       MYSQL_HOST: mysql
       APP_PORT: 8080
-      APP_HOST: http://34.23.170.122
+      NEXT_PUBLIC_APP_HOST: http://34.23.170.122
       TOKEN: prambanan1
       DEVELOPE_MODE: true
       NODE_ENV: production
@@ -20,7 +20,16 @@ services:
     build:
       context: ./
       target: react-dev
-
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: wedding
+      MYSQL_USER: root
+      MYSQL_HOST: mysql
+      APP_PORT: 8080
+      NEXT_PUBLIC_APP_HOST: http://34.23.170.122
+      TOKEN: prambanan1
+      DEVELOPE_MODE: true
+      NODE_ENV: production
     ports:
       - 3000:3000
 

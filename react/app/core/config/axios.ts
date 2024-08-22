@@ -1,6 +1,7 @@
 import { useToast } from "@/app/components/ui/use-toast";
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { useTokenState } from "../hooks/use-token";
+import { kEnv } from "../constans/env";
 
 export function useCatchError() {
   const { toast } = useToast();
@@ -30,7 +31,7 @@ export function useAxios() {
     try {
       const result = await instance<Response>({
         ...params,
-        baseURL: "http://localhost:8080",
+        baseURL: kEnv.NEXT_PUBLIC_APP_HOST,
         headers: {
           token,
           ...params.headers,
