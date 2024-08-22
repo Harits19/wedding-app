@@ -2,38 +2,26 @@ services:
   express:
     build:
       context: ./
-      target: express-dev
+      target: express
+      dockerfile: Express.Dockerfile
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
       MYSQL_USER: root
       MYSQL_HOST: mysql
       NEXT_PUBLIC_APP_PORT: 8080
-      NEXT_PUBLIC_APP_HOST: http://localhost
+      NEXT_PUBLIC_APP_HOST: http://34.23.170.122
       TOKEN: prambanan1
       DEVELOPE_MODE: true
       NODE_ENV: production
     ports:
       - 8080:8080
-    develop:
-      watch:
-        - path: ./express/src
-          action: rebuild
-          target: /usr/local/app/src
-        - path: ./express/package.json
-          action: rebuild
 
   react:
     build:
       context: ./
-      target: react-dev
-    develop:
-      watch:
-        - path: ./react/src
-          action: sync
-          target: /usr/local/app/src
-        - path: ./react/package.json
-          action: rebuild
+      target: react-prod
+      dockerfile: React.Dockerfile
     ports:
       - 3000:3000
 

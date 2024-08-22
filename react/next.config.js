@@ -2,14 +2,10 @@
 const path = require('path');
 const envPath = path.join("../.env");
 const webpack = require('webpack')
-
-
-const { parsed: myEnv } = require('dotenv').config({
-  path: envPath,
-})
+const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: undefined,
+  output: 'standalone',
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -23,7 +19,13 @@ const nextConfig = {
   //   serverComponentsExternalPackages: ["mongoose"] // <-- and this
   // },
   webpack: (config) => {
-    config.plugins.push(new webpack.EnvironmentPlugin(myEnv))
+    console.log({ isProduction });
+    if (!isProduction) {
+      const { parsed: myEnv } = require('dotenv').config({
+        path: envPath,
+      });
+      config.plugins.push(new webpack.EnvironmentPlugin(myEnv));
+    }
     return config;
   },
 };
