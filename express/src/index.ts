@@ -17,7 +17,7 @@ const startExpress = () => {
   app.use(express.json());
   app.use(cors());
 
-  const port = env.APP_PORT;
+  const port = env.NEXT_PUBLIC_APP_PORT;
   const host = env.NEXT_PUBLIC_APP_HOST;
 
   app.get("/", (req: Request, res: Response) => {

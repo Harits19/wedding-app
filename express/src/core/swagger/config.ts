@@ -10,7 +10,7 @@ export const swaggerConfig = swaggerJsdoc({
     },
     servers: [
       {
-        url: `${env.NEXT_PUBLIC_APP_HOST}:${env.APP_PORT}`,
+        url: `${env.NEXT_PUBLIC_APP_HOST}:${env.NEXT_PUBLIC_APP_PORT}`,
       },
     ],
     components: {

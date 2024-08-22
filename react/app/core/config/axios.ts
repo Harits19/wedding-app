@@ -31,7 +31,7 @@ export function useAxios() {
     try {
       const result = await instance<Response>({
         ...params,
-        baseURL: kEnv.NEXT_PUBLIC_APP_HOST,
+        baseURL: `${kEnv.NEXT_PUBLIC_APP_HOST}:${kEnv.NEXT_PUBLIC_APP_PORT}`,
         headers: {
           token,
           ...params.headers,
