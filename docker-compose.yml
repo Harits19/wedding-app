@@ -12,13 +12,13 @@ services:
       mysql:
         condition: service_healthy
 
-  react:
+  nextjs:
     build:
       context: ./
       target: react-prod
       dockerfile: React.Dockerfile
     ports:
-      - 80:3000
+      - 3000:3000
     container_name: nextjs
     restart: always
 
@@ -42,15 +42,18 @@ services:
       PMA_PASSWORD: secret
     ports:
       - 8888:8888
-  # nginx:
-  #   image: nginx:latest
-  #   container_name: nginx
-  #   ports:
-  #     - "80:80"
-  #     - "443:443"
-  #   volumes:
-  #     - /etc/ssl:/etc/nginx/ssl:ro
-  #   restart: always
+      
+  nginx:
+    build:
+      context: ./
+      target: nginx
+      dockerfile: Nginx.Dockerfile
+    # image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
 
 volumes:
   wedding-mysql-data:
