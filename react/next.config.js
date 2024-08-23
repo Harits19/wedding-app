@@ -5,7 +5,7 @@ const webpack = require('webpack')
 const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-  output: undefined,
+  output: 'standalone',
   images: {
     unoptimized: true,
     remotePatterns: [

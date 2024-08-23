@@ -15,10 +15,12 @@ services:
   react:
     build:
       context: ./
-      target: react-prod
+      target: react-prod-standalone
       dockerfile: React.Dockerfile
     ports:
-      - 80:80
+      - 3000:3000
+    container_name: nextjs
+    restart: always
 
   mysql:
     image: mysql:8.0
@@ -40,6 +42,15 @@ services:
       PMA_PASSWORD: secret
     ports:
       - 8888:8888
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/ssl:/etc/nginx/ssl:ro
+    restart: always
 
 volumes:
   wedding-mysql-data:
