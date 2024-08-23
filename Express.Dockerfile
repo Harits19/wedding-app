@@ -17,5 +17,7 @@ COPY --from=build /app/dist ./dist
 COPY express/src/core/swagger/*.yaml ./dist/core/swagger
 
 COPY .env .env
+COPY harits-fia.key harits-fia.key
+COPY harits-fia.my.id.crt harits-fia.my.id.crt
 EXPOSE 8080
 CMD ["node", "dist/index.js"]
