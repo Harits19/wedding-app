@@ -8,8 +8,8 @@ COPY .env .env
 RUN npm ci
 RUN npm run build
 ENV NODE_ENV production
-EXPOSE 80
-ENV PORT 80
+EXPOSE 3000
+ENV PORT 3000
 CMD npm start
 
 
