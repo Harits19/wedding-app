@@ -15,7 +15,7 @@ services:
   react:
     build:
       context: ./
-      target: react-prod-standalone
+      target: react-prod
       dockerfile: React.Dockerfile
     ports:
       - 3000:3000
@@ -42,15 +42,15 @@ services:
       PMA_PASSWORD: secret
     ports:
       - 8888:8888
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - /etc/ssl:/etc/nginx/ssl:ro
-    restart: always
+  # nginx:
+  #   image: nginx:latest
+  #   container_name: nginx
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - /etc/ssl:/etc/nginx/ssl:ro
+  #   restart: always
 
 volumes:
   wedding-mysql-data:
