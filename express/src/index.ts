@@ -10,6 +10,7 @@ import * as WhitelistRepository from "./main/whitelist/repository";
 import * as GreetingRepository from "./main/greeting/repository";
 import { greetingRoute } from "./main/greeting/route";
 import cors from "cors";
+import { initHttpsServer } from "./core/https/config";
 
 const startExpress = () => {
   const app = express();
@@ -42,7 +43,9 @@ const startExpress = () => {
 
   app.use(errorHandler);
 
-  app.listen(port, () => {
+  const server = initHttpsServer(app);
+
+  server.listen(port, () => {
     console.log(`Server running at ${host}:${port}`);
   });
 };
