@@ -2,13 +2,14 @@ name: Initialize Wedding App
 on:
   push:
     branches:
-      - disabled
+      - main
 jobs:
   cd:
     runs-on: ubuntu-latest
     environment: Production
     steps:
       - name: Deploy Using ssh
+        if: startsWith(github.event.head_commit.message, 'run-initialize-workflow')
         uses: appleboy/ssh-action@v1.0.3
         with:
           username: ${{ vars.USERNAME }}
