@@ -2,7 +2,7 @@ name: Build Wedding App
 on:
   push:
     branches:
-      - main
+      - disabled
 jobs:
   cd:
     runs-on: ubuntu-latest
@@ -24,6 +24,24 @@ jobs:
             git remote add origin https://github.com/Harits19/wedding-app.git
             git pull origin main
             git status
+
+            touch .env
+            echo MYSQL_ROOT_PASSWORD="${{ secrets.MYSQL_ROOT_PASSWORD }}" >> .env
+            echo MYSQL_DATABASE="${{ secrets.MYSQL_DATABASE }}" >> .env
+            echo MYSQL_USER="${{ secrets.MYSQL_USER }}" >> .env
+            echo MYSQL_HOST="${{ secrets.MYSQL_HOST }}" >> .env
+            echo NEXT_PUBLIC_APP_PORT="${{ secrets.NEXT_PUBLIC_APP_PORT }}" >> .env
+            echo NEXT_PUBLIC_APP_HOST="${{ secrets.NEXT_PUBLIC_APP_HOST }}" >> .env
+            echo TOKEN="${{ secrets.TOKEN }}" >> .env
+            echo NEXT_PUBLIC_DEVELOPE_MODE="${{ secrets.NEXT_PUBLIC_DEVELOPE_MODE }}" >> .env
+            echo NODE_ENV="${{ secrets.NODE_ENV }}" >> .env
+
+            touch ssl.key
+            echo "${{ secrets.SSL_KEY }}" >> ssl.key
+
+            touch ssl.crt
+            echo "${{ secrets.SSL_CRT }}" >> ssl.crt
+
             docker compose stop
             docker compose build
             docker compose up -d
