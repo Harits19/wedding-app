@@ -30,11 +30,11 @@ jobs:
             echo MYSQL_DATABASE="${{ secrets.MYSQL_DATABASE }}" >> .env
             echo MYSQL_USER="${{ secrets.MYSQL_USER }}" >> .env
             echo MYSQL_HOST="${{ secrets.MYSQL_HOST }}" >> .env
-            echo NEXT_PUBLIC_APP_PORT="${{ secrets.NEXT_PUBLIC_APP_PORT }}" >> .env
-            echo NEXT_PUBLIC_APP_HOST="${{ secrets.NEXT_PUBLIC_APP_HOST }}" >> .env
+            echo NEXT_PUBLIC_APP_PORT="${{ vars.NEXT_PUBLIC_APP_PORT }}" >> .env
+            echo NEXT_PUBLIC_APP_HOST="${{ vars.NEXT_PUBLIC_APP_HOST }}" >> .env
             echo TOKEN="${{ secrets.TOKEN }}" >> .env
-            echo NEXT_PUBLIC_DEVELOPE_MODE="${{ secrets.NEXT_PUBLIC_DEVELOPE_MODE }}" >> .env
-            echo NODE_ENV="${{ secrets.NODE_ENV }}" >> .env
+            echo NEXT_PUBLIC_DEVELOPE_MODE="${{ vars.NEXT_PUBLIC_DEVELOPE_MODE }}" >> .env
+            echo NODE_ENV="${{ vars.NODE_ENV }}" >> .env
 
             touch ssl.key
             echo "${{ secrets.SSL_KEY }}" >> ssl.key
