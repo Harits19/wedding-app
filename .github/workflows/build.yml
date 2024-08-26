@@ -12,7 +12,8 @@ jobs:
         uses: appleboy/ssh-action@v1.0.3
         with:
           username: ${{ vars.USERNAME }}
-          host: ${{ vars.HOST }}
+          # host: ${{ vars.HOST }} TODO uncomment when done
+          host: 34.171.190.139
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
