@@ -26,15 +26,7 @@ jobs:
             git status
 
             touch .env
-            echo MYSQL_ROOT_PASSWORD="${{ secrets.MYSQL_ROOT_PASSWORD }}" >> .env
-            echo MYSQL_DATABASE="${{ secrets.MYSQL_DATABASE }}" >> .env
-            echo MYSQL_USER="${{ secrets.MYSQL_USER }}" >> .env
-            echo MYSQL_HOST="${{ secrets.MYSQL_HOST }}" >> .env
-            echo NEXT_PUBLIC_APP_PORT="${{ vars.NEXT_PUBLIC_APP_PORT }}" >> .env
-            echo NEXT_PUBLIC_APP_HOST="${{ vars.NEXT_PUBLIC_APP_HOST }}" >> .env
-            echo TOKEN="${{ secrets.TOKEN }}" >> .env
-            echo NEXT_PUBLIC_DEVELOPE_MODE="${{ vars.NEXT_PUBLIC_DEVELOPE_MODE }}" >> .env
-            echo NODE_ENV="${{ vars.NODE_ENV }}" >> .env
+            echo "${{ secrets.ENV_FILE }}" >> .env
 
             touch ssl.key
             echo "${{ secrets.SSL_KEY }}" >> ssl.key
