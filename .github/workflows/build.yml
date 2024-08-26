@@ -17,6 +17,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
+            sudo chmod 666 /var/run/docker.sock
             mkdir -p ~/app
             cd ~/app
             echo yes | git clone https://github.com/Harits19/wedding-app.git .
