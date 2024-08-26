@@ -6,11 +6,11 @@ import { Express } from "express";
 export const initHttpsServer = (app: Express) => {
   const isProduction = process.env.NODE_ENV === "production";
   const keyPath = !isProduction
-    ? path.join("../harits-fia.key")
-    : path.join("harits-fia.key");
+    ? path.join("../ssl.key")
+    : path.join("ssl.key");
   const certPath = !isProduction
-    ? path.join("../harits-fia.my.id.crt")
-    : path.join("harits-fia.my.id.crt");
+    ? path.join("../ssl.crt")
+    : path.join("ssl.crt");
 
   console.log({ keyPath, certPath });
 
