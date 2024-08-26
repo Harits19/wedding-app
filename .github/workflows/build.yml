@@ -1,4 +1,4 @@
-name: Build Wedding App 
+name: Build Wedding App
 on:
   push:
     branches:
@@ -12,9 +12,8 @@ jobs:
       - name: Deploy Using ssh
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: 34.101.54.54
           username: ${{ vars.USERNAME }}
-          hostname: ${{ vars.HOST }}
+          host: ${{ vars.HOST }}
           key: ${{ secrets.SSH_KEY }}
           port: 22
           script: |
