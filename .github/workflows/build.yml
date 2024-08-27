@@ -25,12 +25,15 @@ jobs:
             git pull origin main
             git status
 
+            rm -rf .env
             touch .env
             echo "${{ secrets.ENV_FILE }}" >> .env
-
+            
+            rm -rf ssl.key
             touch ssl.key
             echo "${{ secrets.SSL_KEY }}" >> ssl.key
 
+            rm -rf ssl.crt
             touch ssl.crt
             echo "${{ secrets.SSL_CRT }}" >> ssl.crt
 
