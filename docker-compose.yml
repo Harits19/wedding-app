@@ -26,9 +26,7 @@ services:
     image: mysql:8.0
     volumes:
       - wedding-mysql-data:/var/lib/mysql
-    ports:
-      - 3306:3306
-    environment:
+    environment: 
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
     healthcheck:
