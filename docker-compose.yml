@@ -53,8 +53,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-      - "8888:8888"
-      # - "3306:3306"
     restart: always
 
 volumes:
