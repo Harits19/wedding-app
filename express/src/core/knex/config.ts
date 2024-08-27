@@ -1,15 +1,19 @@
 import { Knex, knex } from "knex";
 import { env } from "../env/config";
 
+const connection = {
+  port: 3306,
+  host: env.MYSQL_HOST,
+  user: env.MYSQL_USER,
+  password: env.MYSQL_ROOT_PASSWORD,
+  database: env.MYSQL_DATABASE,
+};
+
+console.log({ connection });
+
 const config: Knex.Config = {
   client: "mysql2",
-  connection: {
-    port: 3306,
-    host: env.MYSQL_HOST,
-    user: env.MYSQL_USER,
-    password: env.MYSQL_ROOT_PASSWORD,
-    database: env.MYSQL_DATABASE,
-  },
+  connection,
 };
 
 export const mysql = knex(config);

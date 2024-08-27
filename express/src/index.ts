@@ -21,6 +21,8 @@ const startExpress = () => {
   const port = env.NEXT_PUBLIC_APP_PORT;
   const host = env.NEXT_PUBLIC_APP_HOST;
 
+  console.log({ host, port });
+
   app.get("/", (req: Request, res: Response) => {
     res.send("Healthy Check");
   });
