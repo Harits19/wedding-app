@@ -4,7 +4,7 @@ import { whitelistRoute } from "./main/whitelist/route";
 import swaggerUi from "swagger-ui-express";
 import { swaggerConfig } from "./core/swagger/config";
 import { env } from "./core/env/config";
-import { checkConnection } from "./core/knex/config";
+import { checkConnection, mysql } from "./core/knex/config";
 import * as AttendanceRepository from "./main/attendance/repository";
 import * as WhitelistRepository from "./main/whitelist/repository";
 import * as GreetingRepository from "./main/greeting/repository";
@@ -12,16 +12,22 @@ import { greetingRoute } from "./main/greeting/route";
 import cors from "cors";
 import { initHttpsServer } from "./core/https/config";
 
+export const serverConfig = () => {
+  const port = env.NEXT_PUBLIC_APP_PORT;
+  const host = env.NEXT_PUBLIC_APP_HOST;
+
+  return {
+    port,
+    host,
+    info: `Server running at ${host}:${port}`,
+  };
+};
+
 const startExpress = () => {
   const app = express();
 
   app.use(express.json());
   app.use(cors());
-
-  const port = env.NEXT_PUBLIC_APP_PORT;
-  const host = env.NEXT_PUBLIC_APP_HOST;
-
-  console.log({ host, port });
 
   app.get("/", (req: Request, res: Response) => {
     res.send("Healthy Check");
@@ -47,15 +53,28 @@ const startExpress = () => {
 
   const server = initHttpsServer(app);
 
-  server.listen(port, () => {
-    console.log(`Server running at ${host}:${port}`);
-  });
+  const { host, info, port } = serverConfig();
+
+  server.listen(port);
+  console.log(`Server running at ${host}:${port}`);
+  return app;
 };
 
-(async () => {
+export const application = (async () => {
   await checkConnection();
   await AttendanceRepository.initialize();
   await WhitelistRepository.initialize();
   await GreetingRepository.initialize();
-  startExpress();
+  return startExpress();
 })();
+
+const gracefulShutdown = () => {
+  mysql
+    .destroy()
+    .catch(() => {})
+    .then(() => process.exit());
+};
+
+process.on("SIGINT", gracefulShutdown);
+process.on("SIGTERM", gracefulShutdown);
+process.on("SIGUSR2", gracefulShutdown); // Sent by nodemon

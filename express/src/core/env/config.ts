@@ -30,6 +30,5 @@ export const env = (() => {
     }
     env[key] = detectedValue;
   }
-  console.log({ env });
   return env as EnvValue;
 })();
