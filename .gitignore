@@ -7,3 +7,4 @@ react/node_modules/*
 *.csr
 *.txt
 *.crt
+express/coverage/*
