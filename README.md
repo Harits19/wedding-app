@@ -21,8 +21,15 @@ Instructions on how to install and set up your project. :
 - Clone this repository by running : `git clone link/of/this/repository.git`
 - Run docker daemon on your machine
 - If you don't have ssl certificate delete line on nginx.conf <br>
-  <code>COPY ssl.key /etc/nginx/ssl/ssl.key <br> COPY ssl.crt /etc/nginx/ssl/ssl.crt and delete line on Express.Dockerfile <br>
-  <code>COPY ssl.key ssl.key <br>COPY ssl.crt ssl.crt 
+  ```
+  COPY ssl.key /etc/nginx/ssl/ssl.key 
+  COPY ssl.crt /etc/nginx/ssl/ssl.crt 
+  ```
+  and delete line on Express.Dockerfile <br>
+  ```
+  COPY ssl.key ssl.key
+  COPY ssl.crt ssl.crt
+  ```
 - Run command `docker compose build` to build images
 - Run command `docker compose run` to run all the container
 - Open `http://localhost:8080/api-docs/` to see Express.js documentation
