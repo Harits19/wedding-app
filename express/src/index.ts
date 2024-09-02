@@ -55,7 +55,7 @@ const startExpress = () => {
 
   const { host, info, port } = serverConfig();
 
-  server.listen(port);
+  (server ?? app).listen(port);
   console.log(`Server running at ${host}:${port}`);
   return app;
 };
