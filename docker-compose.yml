@@ -24,6 +24,7 @@ services:
 
   mysql:
     image: mysql:8.0
+    restart: always
     volumes:
       - wedding-mysql-data:/var/lib/mysql
     ports:
@@ -32,7 +33,9 @@ services:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wedding
     healthcheck:
-      test: "exit 0"
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
 
   phpmyadmin:
     image: phpmyadmin
@@ -42,7 +45,7 @@ services:
       PMA_PASSWORD: secret
     ports:
       - 8888:8888
-      
+
   nginx:
     build:
       context: ./
