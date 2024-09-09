@@ -1,5 +1,6 @@
 services:
   express:
+    container_name: express
     build:
       context: ./
       target: express-prod
@@ -23,10 +24,11 @@ services:
     restart: always
 
   mysql:
+    container_name: mysql
     image: mysql:8.0
     restart: always
     volumes:
-      - wedding-mysql-data:/var/lib/mysql
+      - wedding-mysql-data:/wedding
     ports:
       - 3306:3306
     environment:
@@ -38,6 +40,7 @@ services:
       retries: 10
 
   phpmyadmin:
+    container_name: phpmyadmin
     image: phpmyadmin
     environment:
       PMA_HOST: mysql
