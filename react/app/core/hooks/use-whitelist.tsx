@@ -1,6 +1,5 @@
 import useSWR from "swr";
 import { WhitelistModel } from "../models/whitelist-model";
-import axios from "axios";
 import { BaseResponse } from "../models/base-response";
 import useSWRMutation from "swr/mutation";
 import { useAxios } from "../config/axios";
@@ -59,10 +58,13 @@ export const useWhitelist = () => {
 };
 
 export const useWhitelistFindByName = (name?: string) => {
+  const { fetch } = useAxios();
+
   return useSWR(`${url}/name/${name}`, (key) => {
     if (!name) return undefined;
-    return axios
-      .get<BaseResponse<WhitelistModel | undefined>>(key)
-      .then((value) => value.data);
+    return fetch<unknown, BaseResponse<WhitelistModel | undefined>>({
+      url: key,
+      method: "GET",
+    }).then((value) => value?.data);
   });
 };
