@@ -1,21 +1,13 @@
-/* eslint-disable no-unreachable */
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import WelcomePage from "./components/welcome-page";
 import { WeddingContext } from "./core/hooks/use-wedding-provider";
 import MusicControl from "./components/music-control";
 import { kPublic } from "./core/constans/public";
-import IntroductionPage from "./components/introduction-page";
-import SchedulePage from "./components/schedule-page";
-import GalleryPage from "./components/gallery-page";
-import StoryPage from "./components/story-page";
 import { kEnv } from "./core/constans/env";
-import AttendancePage from "./components/attendance-page";
-import GreetingPage from "./components/greeting-page";
-import GiftPage from "./components/gift-page";
 import CoverPage from "./components/cover-page";
-import ClosingPage from "./components/closing-page";
+import BottomNavigation from "./components/bottom-navigation";
+import { listMainMenu } from "./contanst";
 
 export default function Page() {
   const defaultShowCover = kEnv.NEXT_PUBLIC_DEVELOPE_MODE ? false : true;
@@ -74,15 +66,16 @@ export default function Page() {
         >
           <div id={topComponent} />
           <CoverPage />
-          <WelcomePage />
-          <IntroductionPage />
-          <SchedulePage />
-          <GalleryPage />
-          <StoryPage />
-          <AttendancePage />
-          <GreetingPage />
-          <GiftPage />
-          <ClosingPage />
+          {listMainMenu.map((item) => (
+            <div key={item.key} id={item.key}>
+              {item.view}
+            </div>
+          ))}
+          {!showCover && (
+            <div className="fixed w-full justify-center px-4 mb-4  flex flex-row bottom-0">
+              <BottomNavigation />
+            </div>
+          )}
 
           {!showCover && (
             <div className="fixed w-min mb-20  flex flex-row justify-end self-end bottom-0">
