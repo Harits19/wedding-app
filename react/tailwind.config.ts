@@ -32,7 +32,7 @@ const config = {
       gallery: ["Gallery", "sans-serif"],
       arizona: ["Arizona", "sans-serif"],
       cardo: ["Cardo", "sans-serif"],
-      poppins: ["Poppins", "sans-serif"],
+      poppins: ["Cardo", "sans-serif"],
     },
     container: {
       center: true,
