@@ -36,7 +36,7 @@ export default function ClosingPage() {
         <InViewWrapper className="animate-fade-zoom font-cardo text-[26px] font-bold">
           {text.brideAndGroom}
         </InViewWrapper>
-        <div className="h-8" />
+        <div className="h-12" />
 
         <InViewWrapper className="animate-fade-in-bottom-top flex flex-row text-[14px] items-center gap-x-2">
           {text.madeWith}
