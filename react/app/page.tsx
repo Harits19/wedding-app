@@ -8,6 +8,7 @@ import { kEnv } from "./core/constans/env";
 import CoverPage from "./components/cover-page";
 import BottomNavigation from "./components/bottom-navigation";
 import { listMainMenu } from "./contanst";
+import { InViewWrapperV2 } from "./components/inview-wrapper";
 
 export default function Page() {
   const defaultShowCover = kEnv.NEXT_PUBLIC_DEVELOPE_MODE ? false : true;
@@ -68,7 +69,7 @@ export default function Page() {
           <CoverPage />
           {listMainMenu.map((item) => (
             <div key={item.key} id={item.key}>
-              {item.view}
+              <InViewWrapperV2>{item.view}</InViewWrapperV2>
             </div>
           ))}
           {!showCover && (
