@@ -8,9 +8,12 @@ export default function InViewWrapper(
   return <div {...props} />;
 }
 
-export function InViewWrapperV2(
-  props: DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-) {
-  const { inView, ref } = useInView();
+export function InViewWrapperV2({
+  onChange,
+  ...props
+}: DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement> & {
+  onChange?: (newValue: boolean) => void;
+}) {
+  const { inView, ref } = useInView({ onChange });
   return <div ref={ref} key={`${inView}`} {...props} />;
 }
