@@ -23,46 +23,46 @@ export const listMainMenu = [
   {
     icon: FaDoorOpen,
     view: <WelcomePage />,
-    key: "welcome",
+    key: "Opening",
   },
   {
     icon: FaUserFriends,
     view: <IntroductionPage />,
-    key: "introduction",
+    key: "Mempelai",
   },
   {
     icon: FaCalendar,
     view: <SchedulePage />,
-    key: "schedule",
+    key: "Jadwal",
   },
   {
     icon: FaImages,
     view: <GalleryPage />,
-    key: "gallery",
+    key: "Galeri",
   },
   {
     icon: FaHistory,
     view: <StoryPage />,
-    key: "story",
+    key: "Cerita Kami",
   },
   {
     icon: FaCheckCircle,
     view: <AttendancePage />,
-    key: "attendance",
+    key: "RSVP",
   },
   {
     icon: FaEnvelope,
     view: <GreetingPage />,
-    key: "greeting",
+    key: "Pesan",
   },
   {
     icon: FaGift,
     view: <GiftPage />,
-    key: "gift",
+    key: "Hadiah",
   },
   {
     icon: FaDoorClosed,
     view: <ClosingPage />,
-    key: "closing",
+    key: "Terimakasih",
   },
 ];

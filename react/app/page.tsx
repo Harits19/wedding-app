@@ -73,7 +73,7 @@ export default function Page() {
             </div>
           ))}
           {!showCover && (
-            <div className="fixed w-full justify-center px-4 mb-4  flex flex-row bottom-0">
+            <div className="fixed w-full justify-center left-0 right-0 flex flex-row bottom-0">
               <BottomNavigation />
             </div>
           )}

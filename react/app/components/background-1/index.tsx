@@ -7,7 +7,7 @@ export default function Background1({
   children,
   divider,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   divider?: DecorationProps;
 }) {
   const SideFlower = ({ className = "" }: { className?: string }) => (

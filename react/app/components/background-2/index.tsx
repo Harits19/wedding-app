@@ -9,7 +9,7 @@ export default function Background2({
   className,
   divider,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
   divider?: DecorationProps;
 }) {
