@@ -257,7 +257,7 @@ const config = {
         "fade-out-bottom-top": "fade-out-bottom-top 2s forwards",
         "left-right": "left-right 2s forwards",
         "right-left": "right-left 2s forwards",
-        "flip-right-to-left": "flip-right-to-left 2s ",
+        "flip-right-to-left": "flip-right-to-left 2s forwards",
       },
       backgroundImage: {
         "background-picture-1": `url(/background-picture-1.webp)`,

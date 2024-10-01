@@ -16,7 +16,7 @@ export default function BottomNavigation() {
               onClick={() => {
                 document
                   .getElementById(key)
-                  ?.scrollIntoView({ behavior: "smooth" });
+                  ?.scrollIntoView({ behavior: "instant" });
               }}
               className={`items-center justify-center flex flex-col `}
               key={key}

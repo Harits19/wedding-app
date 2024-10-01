@@ -59,7 +59,7 @@ export default function Page() {
         scrollToTop: () => {
           document
             .getElementById(topComponent)
-            ?.scrollIntoView({ behavior: "smooth" });
+            ?.scrollIntoView({ behavior: "instant" });
         },
       }}
     >
@@ -80,16 +80,13 @@ export default function Page() {
                   onChange={(value) => {
                     if (value === true) {
                       setSelectedMenu(item.key);
-
-                      setTimeout(() => {
-                        document
-                          .getElementById(`menu-${item.key}`)
-                          ?.scrollIntoView({
-                            behavior: "smooth",
-                            block: "center",
-                            inline: "center",
-                          });
-                      }, 300);
+                      document
+                        .getElementById(`menu-${item.key}`)
+                        ?.scrollIntoView({
+                          behavior: "instant",
+                          block: "center",
+                          inline: "center",
+                        });
                     }
                   }}
                 >
