@@ -4,6 +4,8 @@ import { FaLocationArrow } from "react-icons/fa";
 import Card from "../card";
 import { useWhitelistFindByName } from "@/app/core/hooks/use-whitelist";
 import { useGuest } from "@/app/core/hooks/use-guest";
+import Image from "next/image";
+import { kPublic } from "@/app/core/constans/public";
 
 export default function SchedulePage() {
   const text = useText();
@@ -28,10 +30,17 @@ export default function SchedulePage() {
     align?: "left" | "right";
     showLocation?: boolean;
   }) => (
-    <Card align={align}>
+    <Card background={kPublic.background3} align={align}>
       <div className="font-cardo text-[18px] font-bold">{title}</div>
       <div className="text-[12px]">{date}</div>
       <div className="text-[12px]">{time}</div>
+      <Image
+        className={`absolute ${align === "left" ? "right-0 -mr-5" : "left-0 scale-x-[-1] -ml-5"} bottom-0 -mb-5 opacity-30`}
+        width={100}
+        height={100}
+        alt=""
+        src={kPublic.sideFlower1}
+      />
 
       {showLocation && (
         <>
