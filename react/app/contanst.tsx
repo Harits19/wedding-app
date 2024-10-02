@@ -18,11 +18,17 @@ import AttendancePage from "./components/attendance-page";
 import GreetingPage from "./components/greeting-page";
 import GiftPage from "./components/gift-page";
 import ClosingPage from "./components/closing-page";
+import QuoteView from "./components/quote-view";
 
 export const listMainMenu = [
   {
     icon: FaDoorOpen,
-    view: <WelcomePage />,
+    view: (
+      <>
+        <WelcomePage />
+        <QuoteView />
+      </>
+    ),
     key: "Opening",
   },
   {
