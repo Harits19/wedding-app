@@ -14,9 +14,11 @@ export default function BottomNavigation() {
             <button
               id={`menu-${key}`}
               onClick={() => {
-                document
-                  .getElementById(key)
-                  ?.scrollIntoView({ behavior: "instant" });
+                document.getElementById(key)?.scrollIntoView({
+                  behavior: "instant",
+                  block: "start",
+                  inline: "start",
+                });
               }}
               className={`items-center justify-center flex flex-col `}
               key={key}
