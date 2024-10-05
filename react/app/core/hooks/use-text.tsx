@@ -1,30 +1,40 @@
 /* eslint-disable no-unreachable */
 import moment from "moment";
+import "moment/locale/id";
 import { kEnv } from "../constans/env";
 
+moment.locale("id");
+
 export const useText = () => {
-  const date = new Date("13-December-2024");
-  const formatedDate = moment(date).format("dddd, DD MMMM YYYY");
+  const akadDate = new Date("13-December-2024");
+  const resepsiDate = new Date("14-December-2024");
+  const getFormatedDate = (date: Date) =>
+    moment(date).locale("id").format("dddd, DD MMMM YYYY");
+  const akadDateFormated = getFormatedDate(akadDate);
+  const resepsiDateFormated = getFormatedDate(resepsiDate);
 
   const dummyData = {
-    rawWeddingDate: date,
+    rawWeddingDate: akadDate,
     brideAndGroom: "Fulan & Fulanah",
-    weddingDate: formatedDate,
+    weddingDate: resepsiDate,
+    resepsiDate: resepsiDateFormated,
     resepsi: {
       title: "Resepsi",
-      date: formatedDate,
+      date: resepsiDateFormated,
       time: "12.00 - Selesai",
-      location1: "Lokasi 1",
-      location2: "Lokasi 2",
-      linkLocation: "http://google.com",
+      location1: "Kantri Resto",
+      location2:
+        "Jl. Raya Singosari No.169, Pangetan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
+      linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
     },
     akad: {
       title: "Akad Nikah",
-      date: formatedDate,
-      time: "12.00 - Selesai",
-      location1: "Lokasi 1",
-      location2: "Lokasi 2",
-      linkLocation: "http://google.com",
+      date: akadDateFormated,
+      time: "10.00 - Selesai",
+      location1: "Rumah Keluarga Perempuan",
+      location2:
+        "Jl. Simpati No.9, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
+      linkLocation: "https://maps.app.goo.gl/8QoZmuDKp2j473yu6",
     },
     dear: "Dear",
     youAreInvited: "You Are Invited",
@@ -81,7 +91,7 @@ export const useText = () => {
           text: "Keluarga Fia silaturahmi ke kediaman keluarga Harits",
         },
         {
-          date: moment(date).format("DD MMMM YYYY"),
+          date: moment(akadDate).format("DD MMMM YYYY"),
           text: "Dengan mengucap Bissmillahirrahmanirrahim, InSyaa Allah atas restu kedua orang tua dan keluarga besar, kami mengucapkan ikrar janji suci melaksanakan sunnah Rasul untuk menikah agar selalu bersama hingga ke surga-Nya. Mohon do’anya agar rumah tangga kami selalu dalam lindungan Allah, Aamiin",
         },
       ],
@@ -91,7 +101,7 @@ export const useText = () => {
   return {
     ...dummyData,
     brideAndGroom: "Harits & Fia",
-    weddingDate: moment(date).format("dddd, DD MMMM YYYY"),
+    weddingDate: moment(akadDate).format("dddd, DD MMMM YYYY"),
     dear: "Dear",
     youAreInvited: "You Are Invited",
     bukaUndangan: "Buka Undangan",

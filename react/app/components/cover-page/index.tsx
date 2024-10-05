@@ -7,7 +7,7 @@ import { FaRegEnvelopeOpen } from "react-icons/fa";
 import ButtonBrown from "../button-brown";
 
 export default function CoverPage() {
-  const { weddingDate, ...text } = useText();
+  const { resepsiDate, ...text } = useText();
   const guest = useGuest();
   const { setShowCover, showCover } = useWeddingState();
   const RenderName = ({ text }: { text: string }) => {
@@ -66,7 +66,7 @@ export default function CoverPage() {
           <RenderName text={text.groomName} />
         </div>
 
-        <div className=" animate-fade-in my-6">{weddingDate}</div>
+        <div className=" animate-fade-in my-6">{resepsiDate}</div>
 
         <div className="animate-bottom-top-fade flex flex-col items-center">
           <div className="animate-fade-in-bottom-top">{text.kepadaYth}</div>
