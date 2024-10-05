@@ -40,9 +40,9 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * 
  * // Gallery dikasih quote
  * 
- * Wedding gift diisi dengana data beneran
+ * // Wedding gift diisi dengana data beneran
  * 
- * Wedding gift dihilangin yang kado offline
+ * // Wedding gift dihilangin yang kado offline
  * 
  * Di pengenalan ada logo dan akun instagram, ketika di klik diarahin ke akun instagram masing masing
  * 

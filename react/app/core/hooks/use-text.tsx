@@ -145,9 +145,15 @@ export const useText = () => {
     copyAlamat: "Copy Alamat",
     bank: {
       bankName: "Mandiri",
-      noRekening: "12345678",
+      noRekening: "1380020406778",
       whatsapp: "6283840493135",
-      atasNama: "Fulan Saputra",
+      atasNama: "Abdullah Harits",
+    },
+    bankFia: {
+      bankName: "Mandiri",
+      noRekening: "1440022137928",
+      whatsapp: "6283840493135",
+      atasNama: "Mahardien Luthfiyah Nuradenia",
     },
     whatsappConfirmationText:
       "Hai, Saya mau mengkonfirmasi pengiriman kado pernikahan berupa",

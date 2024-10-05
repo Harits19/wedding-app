@@ -2,7 +2,7 @@ import { useText } from "@/app/core/hooks/use-text";
 import Background2 from "../background-2";
 import Title from "../title";
 import Card from "../card";
-import { FaCopy, FaGift, FaWallet, FaWhatsapp } from "react-icons/fa";
+import { FaCopy, FaWallet, FaWhatsapp } from "react-icons/fa";
 import { confirmWhatsapp, copyText } from "@/app/core/utils/text";
 import InViewWrapper from "../inview-wrapper";
 import SmallButton from "../small-button";
@@ -50,6 +50,7 @@ export default function GiftPage() {
                 <Description title={text.noRekening} subtitle={noRekening} />
                 <div className="h-3" />
                 <SmallButton
+                  className="w-fit"
                   icon={<FaCopy />}
                   title={text.copy}
                   onClick={() => {
@@ -57,6 +58,7 @@ export default function GiftPage() {
                   }}
                 />
                 <SmallButton
+                  className="w-fit"
                   icon={<FaWhatsapp />}
                   title={text.konfirmasiViaWA}
                   onClick={() => {
@@ -85,38 +87,10 @@ export default function GiftPage() {
         {text.tanpaMengurangiRasaHormat}
       </InViewWrapper>
 
-      {[text.bank, text.bank].map((item) => (
+      {[text.bank, text.bankFia].map((item) => (
         <RenderCard key={item.noRekening} {...item} />
       ))}
-      <InViewWrapper className="animate-fade-in-top-bottom">
-        <Card>
-          <div className="flex flex-col w-full items-center justify-center py-10">
-            <div className="font-cardo">{text.weddingGift}</div>
-            <div className="h-4" />
-            <FaGift className="text-[80px] text-wedE97777C7" />
-            <div className="h-8" />
-            <div>{text.alamatTerimaKado}</div>
-            <div className="h-4" />
-            <SmallButton
-              title={text.copyAlamat}
-              icon={<FaCopy />}
-              onClick={() => {
-                copyText(text.alamatTerimaKado);
-              }}
-            />
-            <SmallButton
-              title={text.konfirmasiViaWA}
-              icon={<FaWhatsapp />}
-              onClick={() => {
-                confirmWhatsapp(
-                  text.whatsappPenerimaKado,
-                  `${text.whatsappConfirmationText} ${text.kado}`,
-                );
-              }}
-            />
-          </div>
-        </Card>
-      </InViewWrapper>
+
       <div className="h-10" />
     </Background2>
   );
