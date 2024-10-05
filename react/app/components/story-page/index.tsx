@@ -11,9 +11,9 @@ export default function StoryPage() {
       <div className="flex flex-col h-full items-center justify-center font-cardo text-black">
         <Title title={text.loveStory.title} />
         {text.loveStory.value.map((item, index) => {
-          const Line = () => <div className="bg-wedprimary-color h-0.5 flex flex-1 bg-opacity-30" />;
+          const Line = () => <div className="bg-wedprimary-color h-0.5 flex bg-opacity-30 w-1/3" />;
           const Separator = () => (
-            <div className="flex flex-row w-full items-center gap-x-2 ">
+            <div className="flex flex-row w-full justify-center items-center gap-x-2 ">
               <Line />
               <FaHeart className="text-wedE97777C7" />
               <Line />
