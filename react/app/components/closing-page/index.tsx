@@ -23,7 +23,7 @@ export default function ClosingPage() {
             src={kPublic.brideGroom1}
             width={260}
             height={101}
-            className="overflow-hidden border-2 border-white w-[260px] h-[181px] object-cover shadow-3xl"
+            className="overflow-hidden border-2 border-white h-[260px] w-[181px] rounded-full object-cover shadow-3xl"
             style={{
               objectPosition: "50% 20%",
             }}
