@@ -1,11 +1,10 @@
 import {
   FaCalendar,
-  FaCheckCircle,
   FaDoorClosed,
   FaDoorOpen,
   FaEnvelope,
   FaGift,
-  FaHistory,
+  FaHeart,
   FaImages,
   FaUserFriends,
 } from "react-icons/fa";
@@ -14,7 +13,6 @@ import IntroductionPage from "./components/introduction-page";
 import SchedulePage from "./components/schedule-page";
 import GalleryPage from "./components/gallery-page";
 import StoryPage from "./components/story-page";
-import AttendancePage from "./components/attendance-page";
 import GreetingPage from "./components/greeting-page";
 import GiftPage from "./components/gift-page";
 import ClosingPage from "./components/closing-page";
@@ -47,14 +45,9 @@ export const listMainMenu = [
     key: "Galeri",
   },
   {
-    icon: FaHistory,
+    icon: FaHeart,
     view: <StoryPage />,
     key: "Cerita Kami",
-  },
-  {
-    icon: FaCheckCircle,
-    view: <AttendancePage />,
-    key: "RSVP",
   },
   {
     icon: FaEnvelope,

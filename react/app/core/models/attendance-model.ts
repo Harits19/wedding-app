@@ -7,4 +7,5 @@ export interface AttendanceModel {
   createdAt?: Date;
   name: string;
   attendance: AttendanceType;
+  message?: string;
 }
