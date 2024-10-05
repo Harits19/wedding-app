@@ -117,6 +117,7 @@ export default function GiftPage() {
           </div>
         </Card>
       </InViewWrapper>
+      <div className="h-10" />
     </Background2>
   );
 }
