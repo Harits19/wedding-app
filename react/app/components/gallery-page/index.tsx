@@ -34,7 +34,9 @@ export default function GalleryPage() {
 
   const Row1 = ({ align = "left" }: { align?: "left" | "right" }) => {
     return (
-      <div className={`flex flex-row  w-[100vw] h-[70vw] px-2 gap-x-2 ${align === 'right' ? 'flex-row-reverse' : ''}`}>
+      <div
+        className={`flex flex-row  w-[100vw] h-[70vw] px-2 gap-x-2 ${align === "right" ? "flex-row-reverse" : ""}`}
+      >
         <div className="flex flex-col h-full  w-1/3 gap-y-2">
           <Image3 />
           <Image3 />
@@ -52,17 +54,19 @@ export default function GalleryPage() {
         <InViewWrapper className="animate-fade-zoom">
           {text.gallery}
         </InViewWrapper>
-        <div className="h-4" />
-        {/* Row1 */}
-        <Row1 />
-        <div className="h-4" />
-        {/* Row2 */}
-        <div className="flex flex-row w-[100vw] h-[50vw] px-4">
-          <Image4 />
-          <Image4 />
+        <div className="bg-white py-10 bg-opacity-50 border-2 border-white">
+          <div className="h-4" />
+          {/* Row1 */}
+          <Row1 />
+          <div className="h-4" />
+          {/* Row2 */}
+          <div className="flex flex-row w-[100vw] h-[50vw] px-4">
+            <Image4 />
+            <Image4 />
+          </div>
+          <div className="h-4" />
+          <Row1 align="right" />
         </div>
-        <div className="h-4" />
-        <Row1 align="right" />
       </div>
     </Background2>
   );
