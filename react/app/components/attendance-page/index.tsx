@@ -2,7 +2,6 @@ import { useText } from "@/app/core/hooks/use-text";
 import InViewWrapper from "../inview-wrapper";
 import { FaChevronDown } from "react-icons/fa";
 import { useGuest } from "@/app/core/hooks/use-guest";
-import Background1 from "../background-1";
 import { Controller, useForm } from "react-hook-form";
 import {
   AttendanceModel,
@@ -11,7 +10,6 @@ import {
 import Input from "../input";
 import { useAttendance } from "@/app/core/hooks/use-attendance";
 import RenderError from "../render-error";
-import { GreetingModel } from "@/app/core/models/greeting-model";
 import { useGreeting } from "@/app/core/hooks/use-greeting";
 
 export default function AttendanceView({
@@ -24,9 +22,8 @@ export default function AttendanceView({
     "bg-wedprimary-color px-4 py-3 text-base w-full outline-none rounded-lg placeholder-opacity-30";
 
   const { post } = useAttendance();
-  const { trigger, isMutating, data, error } = post;
+  const { trigger } = post;
 
-  console.log("error", error, data?.data, isMutating);
   const { name } = useGuest();
   const listAttendance: Record<AttendanceType, string> = {
     attend: text.sayaAkanDatang,
@@ -42,12 +39,7 @@ export default function AttendanceView({
   });
 
   const { post: postGreeting } = useGreeting();
-  const {
-    trigger: triggerGreeting,
-    isMutating: isMutatingGreeting,
-    data: dataGreeting,
-    error: errorGreeting,
-  } = postGreeting;
+  const { trigger: triggerGreeting } = postGreeting;
 
   return (
     <div className="text-black">

@@ -1,6 +1,6 @@
 import { useText } from "@/app/core/hooks/use-text";
 import Background2 from "../background-2";
-import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 import InViewWrapper from "../inview-wrapper";
 import Title from "../title";
 
