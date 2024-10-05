@@ -26,6 +26,9 @@ const config = {
   prefix: "",
   theme: {
     fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
       brittany: ["Brittany", "sans-serif"],
       italiana: ["Italiana", "sans-serif"],
       cormorant: ["Cormorant", "sans-serif"],

@@ -34,7 +34,7 @@ export default function Background2({
 
   const RenderChildren = () => {
     return (
-      <div className={cn([" relative w-full  py-[160px] px-4 ", className])}>
+      <div className={cn([" relative w-full  py-[80px] px-4 ", className])}>
         {children}
       </div>
     );
