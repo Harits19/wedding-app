@@ -13,11 +13,11 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
 
 /// TODO
 /**
- * Opening di pendekin
+ * // Opening di pendekin
  * 
- * Surat Ar Rum dikasih tulisan arabnya
+ * // Surat Ar Rum dikasih tulisan arabnya
  * 
- * animasi di quote di fix saat scroll kebawah
+ * //animasi di quote di fix saat scroll kebawah
  * quote view di kecilin
  * di pengenalan pengantin dikasih tulisan bahasa arab bismillah
  * Maha suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Insya Allah, akan diselenggarakan acara pernikahan antara :

@@ -5,7 +5,10 @@ import { useInView } from "react-intersection-observer";
 export default function InViewWrapper(
   props: DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 ) {
-  return <div {...props} />;
+  const { inView, ref } = useInView();
+  return (
+    <div ref={ref} {...props} key={`${inView}-${props.key}`} />
+  );
 }
 
 export function InViewWrapperV2({
