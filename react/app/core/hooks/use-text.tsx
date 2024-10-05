@@ -2,6 +2,7 @@
 import moment from "moment";
 import "moment/locale/id";
 import { kEnv } from "../constans/env";
+import { kPublic } from "../constans/public";
 
 moment.locale("id");
 
@@ -52,12 +53,14 @@ export const useText = () => {
       fullName: "Fulan",
       sonOrder: "Putra pertama dari",
       instagram: "abd.harits19",
+      image: "",
       parentName: "Nama Bapak dan Ibu",
     },
     bride: {
       fullName: "Fulanah",
       sonOrder: "Putri kedua dari",
       instagram: "abd.harits19",
+      image: "",
       parentName: "Nama Bapak dan Ibu",
     },
     selesai: "selesai",
@@ -116,12 +119,14 @@ export const useText = () => {
       fullName: "Abdullah Harits S.Kom",
       instagram: "abd.harits19",
       sonOrder: "Putra kedua dari",
+      image: kPublic.groomIntroduction,
       parentName:
         "Bpk. H. Wharnomo Fauzy, S.E., M.M dan Ibu Hj. Jatisari Rahmawati",
     },
     bride: {
       fullName: "Mahardien Luthfiyah N, A.Md",
       instagram: "lthfyh_",
+      image: kPublic.brideIntroduction,
       sonOrder: "Putri kedua dari",
       parentName: "Bpk (Alm) H. Muhariyadi, S.T dan Ibu Romi Sumalia",
     },

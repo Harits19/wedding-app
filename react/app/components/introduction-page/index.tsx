@@ -1,4 +1,3 @@
-import { kPublic } from "@/app/core/constans/public";
 import { useText } from "@/app/core/hooks/use-text";
 import Image from "next/image";
 import InViewWrapper from "../inview-wrapper";
@@ -8,20 +7,21 @@ import { FaInstagram } from "react-icons/fa";
 export default function IntroductionPage() {
   const text = useText();
   const RenderCoupleName = ({
-    value: { fullName, parentName, sonOrder, instagram },
+    value: { fullName, parentName, sonOrder, instagram, image },
   }: {
     value: {
       fullName: string;
       sonOrder: string;
       parentName: string;
       instagram: string;
+      image: string;
     };
   }) => (
     <div className="flex flex-col items-center">
       <InViewWrapper>
         <Image
           alt=""
-          src={kPublic.brideGroom1}
+          src={image}
           width={260}
           height={101}
           className="overflow-hidden border-2 border-white h-[260px] w-[181px] object-cover shadow-3xl rounded-full"

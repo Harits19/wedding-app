@@ -25,5 +25,8 @@ export const kPublic = {
   gallery6: "/images/gallery-6.jpeg",
   gallery7: "/images/gallery-7.jpeg",
   gallery8: "/images/gallery-8.jpeg",
+  groomIntroduction: "/images/groom-introduction.jpeg",
+  brideIntroduction: "/images/bride-introduction.jpeg",
+
 
 };
