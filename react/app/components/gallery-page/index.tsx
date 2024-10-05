@@ -7,11 +7,12 @@ import { kPublic } from "@/app/core/constans/public";
 export default function GalleryPage() {
   const text = useText();
 
-  const ImageFull = () => {
+  const ImageFull = ({ image }: { image?: string }) => {
+    if (!image) return;
     return (
       <Image
         alt="Message Image"
-        src={kPublic.brideGroom1}
+        src={image}
         className={`shrink-0 rounded-lg animate-fade-in `}
         layout="fill"
         objectFit="cover"
@@ -20,29 +21,35 @@ export default function GalleryPage() {
     );
   };
 
-  const Image3 = () => (
+  const Image3 = ({ image }: { image?: string }) => (
     <div className=" relative flex flex-1 object-cover ">
-      <ImageFull />
+      <ImageFull image={image} />
     </div>
   );
 
-  const Image4 = () => (
+  const Image4 = ({ image }: { image?: string }) => (
     <div className="flex flex-1 relative">
-      <ImageFull />
+      <ImageFull image={image} />
     </div>
   );
 
-  const Row1 = ({ align = "left" }: { align?: "left" | "right" }) => {
+  const Row1 = ({
+    align = "left",
+    images = [],
+  }: {
+    align?: "left" | "right";
+    images: string[];
+  }) => {
     return (
       <div
         className={`flex flex-row  w-[100vw] h-[70vw] px-2 gap-x-2 ${align === "right" ? "flex-row-reverse" : ""}`}
       >
         <div className="flex flex-col h-full  w-1/3 gap-y-2">
-          <Image3 />
-          <Image3 />
+          <Image3 image={images.at(0)} />
+          <Image3 image={images.at(1)} />
         </div>
         <div className="flex h-full relative  w-2/3">
-          <ImageFull />
+          <ImageFull image={images.at(2)} />
         </div>
       </div>
     );
@@ -66,15 +73,20 @@ export default function GalleryPage() {
         <div className="bg-white py-10 bg-opacity-50 border-2 border-white">
           <div className="h-4" />
           {/* Row1 */}
-          <Row1 />
+          <Row1
+            images={[kPublic.gallery1, kPublic.gallery2, kPublic.gallery3]}
+          />
           <div className="h-4" />
           {/* Row2 */}
-          <div className="flex flex-row w-[100vw] h-[50vw] px-4">
-            <Image4 />
-            <Image4 />
+          <div className="flex flex-row w-[100vw] h-[50vw] px-4 gap-x-2">
+            <Image4 image={kPublic.gallery4} />
+            <Image4 image={kPublic.gallery5} />
           </div>
           <div className="h-4" />
-          <Row1 align="right" />
+          <Row1
+            images={[kPublic.gallery6, kPublic.gallery7, kPublic.gallery8]}
+            align="right"
+          />
         </div>
       </div>
     </Background2>

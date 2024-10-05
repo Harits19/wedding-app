@@ -17,4 +17,13 @@ export const kPublic = {
   background2: "/images/background2.png",
   background3: "/images/background3.png",
   container1: "/images/container1.png",
+  gallery1: "/images/gallery-1.jpeg",
+  gallery2: "/images/gallery-2.jpeg",
+  gallery3: "/images/gallery-3.jpeg",
+  gallery4: "/images/gallery-4.jpeg",
+  gallery5: "/images/gallery-5.jpeg",
+  gallery6: "/images/gallery-6.jpeg",
+  gallery7: "/images/gallery-7.jpeg",
+  gallery8: "/images/gallery-8.jpeg",
+
 };
