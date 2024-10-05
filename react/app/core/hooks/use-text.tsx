@@ -98,7 +98,7 @@ export const useText = () => {
 
   return {
     ...dummyData,
-    brideAndGroom: "Harits & Fia",
+    brideAndGroom: "Fia & Harits",
     weddingDate: moment(akadDate).format("dddd, DD MMMM YYYY"),
     dear: "Dear",
     youAreInvited: "You Are Invited",

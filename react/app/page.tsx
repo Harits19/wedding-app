@@ -44,13 +44,13 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * 
  * // Wedding gift dihilangin yang kado offline
  * 
- * Di pengenalan ada logo dan akun instagram, ketika di klik diarahin ke akun instagram masing masing
+ * // Di pengenalan ada logo dan akun instagram, ketika di klik diarahin ke akun instagram masing masing
  * 
  * 
- * Foto di closing diganti oval, terus agak dibesarin
+ * // Foto di closing diganti oval, terus agak dibesarin
  * 
  * 
- * diganti ke Fia & Harits
+ * // diganti ke Fia & Harits
  * 
  * @returns 
  */
