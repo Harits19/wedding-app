@@ -20,7 +20,7 @@ export default function Background1({
     />
   );
 
-  const RenderChildren = () => <div className={`py-[320px]`}>{children}</div>;
+  const RenderChildren = () => <div className={`py-[160px] `}>{children}</div>;
 
   return (
     <div className="relative w-full bg-wedbackground-color-light  font-cardo text-wedprimary-color">
