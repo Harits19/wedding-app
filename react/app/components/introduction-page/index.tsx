@@ -16,7 +16,7 @@ export default function IntroductionPage() {
     };
   }) => (
     <div className="flex flex-col items-center">
-      <InViewWrapper className="animate-fade-in-bottom-top">
+      <InViewWrapper>
         <Image
           alt=""
           src={kPublic.brideGroom1}
@@ -56,7 +56,7 @@ export default function IntroductionPage() {
         </div>
         <div className="h-4" />
 
-        <InViewWrapper className="animate-left-right">
+        <InViewWrapper className="animate-fade-in">
           <RenderCoupleName value={text.groom} />
         </InViewWrapper>
 
@@ -66,7 +66,7 @@ export default function IntroductionPage() {
           <Divider />
         </div>
 
-        <InViewWrapper className="animate-right-left">
+        <InViewWrapper className="animate-fade-in">
           <RenderCoupleName value={text.bride} />
         </InViewWrapper>
       </div>
