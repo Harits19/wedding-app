@@ -3,16 +3,18 @@ import { useText } from "@/app/core/hooks/use-text";
 import Image from "next/image";
 import InViewWrapper from "../inview-wrapper";
 import Background2 from "../background-2";
+import { FaInstagram } from "react-icons/fa";
 
 export default function IntroductionPage() {
   const text = useText();
   const RenderCoupleName = ({
-    value: { fullName, parentName, sonOrder },
+    value: { fullName, parentName, sonOrder, instagram },
   }: {
     value: {
       fullName: string;
       sonOrder: string;
       parentName: string;
+      instagram: string;
     };
   }) => (
     <div className="flex flex-col items-center">
@@ -33,6 +35,19 @@ export default function IntroductionPage() {
         <div className="font-cardo text-[20px] font-bold">{fullName}</div>
         <div className="text-[16px] text-wedprimary-color">{sonOrder}</div>
         <div className="text-[14px] font-bold">{parentName}</div>
+        <div className="h-2" />
+        <div className="flex flex-row justify-center items-center ">
+          <button
+            onClick={() => {
+              window.open(`https://www.instagram.com/${instagram}`);
+            }}
+            className="bg-wedprimary-color text-white w-fit flex flex-row items-center justify-center px-2 rounded-full"
+          >
+            <FaInstagram />
+            <div className="w-2" />
+            {instagram}
+          </button>
+        </div>
       </div>
     </div>
   );

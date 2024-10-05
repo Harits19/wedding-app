@@ -51,11 +51,13 @@ export const useText = () => {
     groom: {
       fullName: "Fulan",
       sonOrder: "Putra pertama dari",
+      instagram: "abd.harits19",
       parentName: "Nama Bapak dan Ibu",
     },
     bride: {
       fullName: "Fulanah",
       sonOrder: "Putri kedua dari",
+      instagram: "abd.harits19",
       parentName: "Nama Bapak dan Ibu",
     },
     selesai: "selesai",
@@ -112,12 +114,14 @@ export const useText = () => {
       "Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah kami akan menyelenggarakan acara pernikahan :",
     groom: {
       fullName: "Abdullah Harits S.Kom",
+      instagram: "abd.harits19",
       sonOrder: "Putra kedua dari",
       parentName:
         "Bpk. H. Wharnomo Fauzy, S.E., M.M dan Ibu Hj. Jatisari Rahmawati",
     },
     bride: {
       fullName: "Mahardien Luthfiyah N, A.Md",
+      instagram: "lthfyh_",
       sonOrder: "Putri kedua dari",
       parentName: "Bpk (Alm) H. Muhariyadi, S.T dan Ibu Romi Sumalia",
     },
