@@ -18,6 +18,7 @@ export default function SchedulePage() {
     value: { date, location1, location2, time, title, linkLocation },
     align = "left",
     showLocation = true,
+    bigFont = false,
   }: {
     value: {
       title: string;
@@ -29,11 +30,14 @@ export default function SchedulePage() {
     };
     align?: "left" | "right";
     showLocation?: boolean;
+    bigFont?: boolean;
   }) => (
     <Card background={kPublic.background3} align={align}>
-      <div className="font-cardo text-[18px] font-bold">{title}</div>
-      <div className="text-[12px]">{date}</div>
-      <div className="text-[12px]">{time}</div>
+      <div className={`font-cardo text-[${bigFont ? 20 : 18}px] font-bold`}>
+        {title}
+      </div>
+      <div className={`text-[${bigFont ? 14 : 12}px]`}>{date}</div>
+      <div className={`text-[${bigFont ? 14 : 12}px]`}>{time}</div>
       <Image
         className={`absolute ${align === "left" ? "right-0 -mr-5" : "left-0 scale-x-[-1] -ml-5"} bottom-0 -mb-5 opacity-30`}
         width={100}
@@ -45,9 +49,13 @@ export default function SchedulePage() {
       {showLocation && (
         <>
           <div className="h-2" />
-          <div className="text-[12px]">{text.bertempatDi}</div>
-          <div className="text-[14px] font-bold">{location1}</div>
-          <div className="text-[12px]">{location2}</div>
+          <div className={`text-[${bigFont ? 14 : 12}px]`}>
+            {text.bertempatDi}
+          </div>
+          <div className={`text-[${bigFont ? 16 : 14}px] font-bold`}>
+            {location1}
+          </div>
+          <div className={`text-[${bigFont ? 14 : 12}px]`}>{location2}</div>
           <div className="h-2" />
           <div
             className={`flex flex-row ${align === "left" ? "justify-start" : " justify-end"}`}
@@ -83,7 +91,7 @@ export default function SchedulePage() {
           showLocation={isWhiteList}
         />
         <div className="h-4" />
-        <RenderCard value={text.resepsi} />
+        <RenderCard value={text.resepsi} bigFont />
       </div>
     </Background1>
   );

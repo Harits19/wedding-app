@@ -26,8 +26,8 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * // Space kosong dikurangin
  * // Wording di schedule Tanpa mengurangi rasa hormat, kami bermaksud untuk mengundang bapak/ibu/saudara/i untuk menghadiri acara pernikahan kami yang insyaAllah akan diselenggarakan pada 
  * //Tulis lokasi asli di halaman schedule
- * Pakai bahasa indonesia untuk semua selain opening
- * Ukuran font halaman jadwal untuk resepsi diperbesar
+ * // Pakai bahasa indonesia untuk semua selain opening
+ * //Ukuran font halaman jadwal untuk resepsi diperbesar
  * Galeri diganti kotak2 beda ukuran seperti undangan pake background putih
  * 
  * 
