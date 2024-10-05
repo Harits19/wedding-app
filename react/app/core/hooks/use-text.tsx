@@ -75,12 +75,8 @@ export const useText = () => {
           text: "Bertemu kembali pada acara kunjungan dan upgrading RKIM di Yogyakarta",
         },
         {
-          date: "Oktober 2019",
+          date: "November 2019",
           text: "Setelah kegiatan di Yogyakarta, Fia dan Harits mulai menjalin komunikasi dan mulai mengikuti beberapa lomba team bersama",
-        },
-        {
-          date: "Februari 2020",
-          text: "Memutuskan untuk saling berkomitmen satu dengan yang lain",
         },
         {
           date: "13 April 2024",

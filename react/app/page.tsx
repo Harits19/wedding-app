@@ -31,9 +31,9 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * // Galeri diganti kotak2 beda ukuran seperti undangan pake background putih
  * 
  * 
- * Love story
- * Februari 2020 dihapus
- * Yang Oktober 2019 ganti ke November 2019
+ * //Love story
+ * //Februari 2020 dihapus
+ * //Yang Oktober 2019 ganti ke November 2019
  * 
  * Reservasi dibikin dialog buat ucapan 
  * Doa ucapan dibikin transparant, dikasih blur
