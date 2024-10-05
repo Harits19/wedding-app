@@ -15,12 +15,14 @@ export default function ClosingPage() {
         </div>
         <div className="h-2" />
 
-        <InViewWrapper className="animate-fade-zoom text-[18px] font-bold">{text.waalaikumussalam}</InViewWrapper>
+        <InViewWrapper className="animate-fade-zoom text-[18px] font-bold">
+          {text.waalaikumussalam}
+        </InViewWrapper>
         <div className="h-8" />
         <InViewWrapper className="animate-flip-right-to-left">
           <Image
             alt=""
-            src={kPublic.brideGroom1}
+            src={kPublic.closingImage}
             width={260}
             height={101}
             className="overflow-hidden border-2 border-white h-[260px] w-[181px] rounded-full object-cover shadow-3xl"

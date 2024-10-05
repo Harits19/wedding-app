@@ -27,6 +27,7 @@ export const kPublic = {
   gallery8: "/images/gallery-8.jpeg",
   groomIntroduction: "/images/groom-introduction.jpeg",
   brideIntroduction: "/images/bride-introduction.jpeg",
+  closingImage: "/images/closing-image.jpeg"
 
 
 };
