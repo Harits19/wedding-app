@@ -54,6 +54,15 @@ export default function GalleryPage() {
         <InViewWrapper className="animate-fade-zoom">
           {text.gallery}
         </InViewWrapper>
+        <div className="h-4" />
+        <div className="text-center text-[14px] italic px-4">
+          {`"Sesungguhnya tidak ada laki-laki dan perempuan yang sempurna,
+          tetapi kesempurnaan diciptakan apabila keduanya saling menutupi
+          kekurangan"`}
+          <div className="h-2" />
+          <div className="font-bold not-italic">Habib Umar bin Hafidz</div>
+        </div>
+        <div className="h-4" />
         <div className="bg-white py-10 bg-opacity-50 border-2 border-white">
           <div className="h-4" />
           {/* Row1 */}

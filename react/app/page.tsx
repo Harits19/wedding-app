@@ -35,10 +35,10 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * //Februari 2020 dihapus
  * //Yang Oktober 2019 ganti ke November 2019
  * 
- * Reservasi dibikin dialog buat ucapan 
- * Doa ucapan dibikin transparant, dikasih blur
+ * // Reservasi dibikin dialog buat ucapan 
+ * // Doa ucapan dibikin transparant, dikasih blur
  * 
- * Gallery dikasih quote
+ * // Gallery dikasih quote
  * 
  * Wedding gift diisi dengana data beneran
  * 
