@@ -31,8 +31,8 @@ export default function IntroductionPage() {
       <div className="h-8" />
       <div className="font-poppins">
         <div className="font-cardo text-[20px] font-bold">{fullName}</div>
-        <div className="text-[16px]">{sonOrder}</div>
-        <div className="text-[12px]">{parentName}</div>
+        <div className="text-[16px] text-wedprimary-color">{sonOrder}</div>
+        <div className="text-[14px] font-bold">{parentName}</div>
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ export default function IntroductionPage() {
     <Background2>
       <div className=" bg-opacity-50 bg-white rounded-xl px-4 pb-20 justify-center items-center flex flex-col">
         <div className="h-8" />
-        <InViewWrapper className="font-semibold text-[20px] animate-fade-in-top-bottom font-sans">
+        <InViewWrapper className="font-semibold text-[20px] animate-fade-in-top-bottom font-sans text-wedprimary-color">
           بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ
         </InViewWrapper>
         <div className="h-8" />
@@ -51,8 +51,10 @@ export default function IntroductionPage() {
         <InViewWrapper className="font-semibold text-[20px] animate-fade-in-top-bottom">
           {text.assalamualaikum}
         </InViewWrapper>
-        <div className="font-poppins text-[12px]">
-          {text.denganMemohonRahmat}
+        <div className="font-poppins text-[15px]">
+          Maha suci Allah SWT yang telah menciptakan makhluk-Nya
+          berpasang-pasangan. InsyaAllah, akan diselenggarakan acara pernikahan
+          antara :
         </div>
         <div className="h-4" />
 

@@ -23,7 +23,7 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * //Maha suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Insya Allah, akan diselenggarakan acara pernikahan antara :
  * //Fotonya oval
  * // Ganti animasi ke fade untuk foto pengenalan
- * Space kosong dikurangin
+ * // Space kosong dikurangin
  * Wording di schedule Tanpa mengurangi rasa hormat, kami bermaksud untuk mengundang bapak/ibu/saudara/i untuk menghadiri acara pernikahan kami yang insyaAllah akan diselenggarakan pada 
  * Tulis lokasi asli di halaman schedule
  * Pakai bahasa indonesia untuk semua selain opening

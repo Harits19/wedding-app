@@ -71,10 +71,10 @@ export default function SchedulePage() {
   return (
     <Background1>
       <div className="flex flex-col p-4 justify-center items-center ">
-        <div className="text-center px-4 bg-white rounded-lg border-2 border-white bg-opacity-95 py-4">
-          Maha suci Allah SWT yang telah menciptakan makhluk-Nya
-          berpasang-pasangan. InsyaAllah, akan diselenggarakan acara pernikahan
-          antara :
+        <div className="text-center px-4 bg-white rounded-lg border-2 text-black border-white bg-opacity-95 py-4">
+          Tanpa mengurangi rasa hormat, kami bermaksud untuk mengundang
+          bapak/ibu/saudara/i untuk menghadiri acara pernikahan kami yang
+          insyaAllah akan diselenggarakan pada :
         </div>
         <div className="h-8" />
         <RenderCard
