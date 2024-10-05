@@ -18,8 +18,8 @@ import { MenuContext } from "./core/hooks/use-menu-provider";
  * // Surat Ar Rum dikasih tulisan arabnya
  * 
  * //animasi di quote di fix saat scroll kebawah
- * quote view di kecilin
- * di pengenalan pengantin dikasih tulisan bahasa arab bismillah
+ * //quote view di kecilin
+ * //di pengenalan pengantin dikasih tulisan bahasa arab bismillah
  * Maha suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan. Insya Allah, akan diselenggarakan acara pernikahan antara :
  * Fotonya oval
  * Ganti animasi ke fade untuk foto pengenalan
