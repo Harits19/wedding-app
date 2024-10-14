@@ -1,10 +1,10 @@
 "use server";
 
 import { HttpStatusCode } from "axios";
-import { GreetingValidator } from "../../core/models/greeting-model";
 import JsonUtil from "@/app/core/utils/json";
+import { AttendanceValidator } from "@/app/core/models/attendance-model";
 
-const { get, insert } = new JsonUtil("greeting")
+const { get, insert } = new JsonUtil("attendance")
 
 
 export const GET = async () => {
@@ -25,7 +25,7 @@ export const POST = async (req: Request) => {
 
   try {
     const json = await req.json()
-    const body = GreetingValidator.parse(json)
+    const body = AttendanceValidator.parse(json)
 
     await insert(body)
     return Response.json({
