@@ -14,7 +14,7 @@ jobs:
         with:
           username: ${{ vars.USERNAME }}
           host: ${{ vars.HOST }}
-          key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
             sudo chmod 666 /var/run/docker.sock
@@ -28,7 +28,7 @@ jobs:
             rm -rf .env
             touch .env
             echo "${{ secrets.ENV_FILE }}" >> .env
-            
+
             rm -rf ssl.key
             touch ssl.key
             echo "${{ secrets.SSL_KEY }}" >> ssl.key
