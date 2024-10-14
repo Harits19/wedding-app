@@ -1,56 +1,8 @@
 [
   {
-    "id": 1,
-    "name": "test from local",
-    "message": "test",
-    "createdAt": "2024-09-10T03:38:01.000Z"
-  },
-  {
-    "id": 2,
-    "name": "Harits",
-    "message": "test ucapan",
-    "createdAt": "2024-10-05T09:28:35.000Z"
-  },
-  {
-    "id": 3,
-    "name": "Harits Abdullah",
-    "message": "Test ucapan 3",
-    "createdAt": "2024-10-05T09:29:44.000Z"
-  },
-  {
-    "id": 4,
-    "name": "Harits",
-    "message": "Test Ucapan 4",
-    "createdAt": "2024-10-05T09:29:59.000Z"
-  },
-  {
-    "id": 5,
-    "name": "Harits",
-    "message": "Test Greeting with Message",
-    "createdAt": "2024-10-05T09:50:36.000Z"
-  },
-  {
-    "id": 6,
-    "name": "Harits With Attendance",
-    "message": "asdasd",
-    "createdAt": "2024-10-05T09:52:33.000Z"
-  },
-  {
-    "id": 7,
-    "name": "Harits sss",
-    "message": "asdasd",
-    "createdAt": "2024-10-05T09:56:10.000Z"
-  },
-  {
-    "id": 8,
-    "name": "Fia test",
-    "message": "Selamat ya",
-    "createdAt": "2024-10-05T17:08:11.000Z"
-  },
-  {
-    "id": 9,
-    "name": "Fia test 1",
-    "message": "Samawa..",
-    "createdAt": "2024-10-13T22:59:17.000Z"
+    "name": "asd",
+    "message": "message test",
+    "id": 1728896747449,
+    "createdAt": "2024-10-14T09:05:47.449Z"
   }
 ]
