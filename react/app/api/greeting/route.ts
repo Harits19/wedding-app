@@ -1,10 +1,10 @@
 "use server";
 
 import { HttpStatusCode } from "axios";
-import { GreetingValidator } from "../../core/models/greeting-model";
+import { GreetingModel, GreetingValidator } from "../../core/models/greeting-model";
 import JsonUtil from "@/app/core/utils/json";
 
-const { get, insert } = new JsonUtil("greeting")
+const { get, insert } = new JsonUtil<GreetingModel>("greeting")
 
 
 export const GET = async () => {

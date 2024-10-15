@@ -2,9 +2,9 @@
 
 import { HttpStatusCode } from "axios";
 import JsonUtil from "@/app/core/utils/json";
-import { AttendanceValidator } from "@/app/core/models/attendance-model";
+import { AttendanceModel, AttendanceValidator } from "@/app/core/models/attendance-model";
 
-const { get, insert } = new JsonUtil("attendance")
+const { get, insert } = new JsonUtil<AttendanceModel>("attendance")
 
 
 export const GET = async () => {

@@ -1,7 +1,11 @@
+"use server";
+
+import { HttpStatusCode } from "axios";
 import JsonUtil from "@/app/core/utils/json";
+import { WhitelistModel } from "@/app/core/models/whitelist-model";
 
+const { get } = new JsonUtil<WhitelistModel>("whitelist");
 
-const { get } = new JsonUtil("/whitelist")
 
 export const GET = async () => {
   try {
@@ -11,7 +15,8 @@ export const GET = async () => {
     });
   } catch (error) {
     return Response.json({
-      data: [],
-    });
+      error,
+    }, { status: HttpStatusCode.InternalServerError, });
   }
 };
+
