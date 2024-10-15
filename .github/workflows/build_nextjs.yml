@@ -26,6 +26,7 @@ jobs:
             # verifies the right npm version is in the environment
             npm -v 
 
+
             mkdir -p ~/app
             cd ~/app
             echo yes | git clone https://github.com/Harits19/wedding-app.git .
@@ -39,6 +40,7 @@ jobs:
             touch .env
             echo "${{ secrets.ENV_REACT }}" >> .env
 
+            npm install next
             npm run build
 
             npm install pm2 -g
