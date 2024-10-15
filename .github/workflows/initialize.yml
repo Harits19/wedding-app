@@ -2,7 +2,7 @@ name: Initialize Wedding App
 on:
   push:
     branches:
-      - main
+      - disabled
 jobs:
   cd:
     runs-on: ubuntu-latest

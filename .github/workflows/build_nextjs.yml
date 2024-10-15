@@ -17,7 +17,15 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            sudo chmod 666 /var/run/docker.sock
+            # installs nvm (Node Version Manager)
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+            # download and install Node.js (you may need to restart the terminal)
+            nvm install 20
+            # verifies the right Node.js version is in the environment
+            node -v 
+            # verifies the right npm version is in the environment
+            npm -v 
+
             mkdir -p ~/app
             cd ~/app
             echo yes | git clone https://github.com/Harits19/wedding-app.git .
@@ -25,18 +33,15 @@ jobs:
             git pull origin main
             git status
 
+            cd react
+
             rm -rf .env
             touch .env
-            echo "${{ secrets.ENV_FILE }}" >> .env
+            echo "${{ secrets.ENV_REACT }}" >> .env
 
-            rm -rf ssl.key
-            touch ssl.key
-            echo "${{ secrets.SSL_KEY }}" >> ssl.key
+            npm run build
 
-            rm -rf ssl.crt
-            touch ssl.crt
-            echo "${{ secrets.SSL_CRT }}" >> ssl.crt
+            npm install pm2 -g
+            pm2 del all
+            pm2 start npm --name nextjs -- start --
 
-            docker compose stop
-            docker compose build
-            docker compose up -d
