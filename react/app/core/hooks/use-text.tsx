@@ -121,14 +121,14 @@ export const useText = () => {
       sonOrder: "Putra kedua dari",
       image: kPublic.groomIntroduction,
       parentName:
-        "Bpk. H. Wharnomo Fauzy, S.E., M.M dan Ibu Hj. Jatisari Rahmawati",
+        "Bpk. H. Wharnomo Fauzy, S.E., M.M\ndan Ibu Hj. Jatisari Rahmawati",
     },
     bride: {
       fullName: "Mahardien Luthfiyah N, A.Md",
       instagram: "lthfyh_",
       image: kPublic.brideIntroduction,
       sonOrder: "Putri kedua dari",
-      parentName: "Bpk (Alm) H. Muhariyadi, S.T dan Ibu Romi Sumalia",
+      parentName: "Bpk (Alm) H. Muhariyadi, S.T\ndan Ibu Romi Sumalia",
     },
     mohonMaafJikaAdaKesalahanPenulisanNama:
       "*Mohon maaf jika ada kesalahan penulisan nama/gelar",

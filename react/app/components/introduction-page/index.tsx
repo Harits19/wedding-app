@@ -34,7 +34,9 @@ export default function IntroductionPage() {
       <div className="font-poppins">
         <div className="font-cardo text-[20px] font-bold">{fullName}</div>
         <div className="text-[16px] text-wedprimary-color">{sonOrder}</div>
-        <div className="text-[14px] font-bold">{parentName}</div>
+        <div className="text-[14px] font-bold">
+          <pre>{parentName}</pre>
+        </div>
         <div className="h-2" />
         <div className="flex flex-row justify-center items-center ">
           <button

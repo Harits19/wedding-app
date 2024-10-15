@@ -7,7 +7,7 @@ export default function BottomNavigation() {
   const splittedMenu = splitToChunk(chunkSize, listMainMenu);
   const { menu } = useMenuState();
   return (
-    <div className="flex w-full overflow-x-scroll flex-row gap-x-2 p-4 bg-white shadow-smw">
+    <div className="flex w-mobile overflow-x-scroll flex-row gap-x-2 p-4 bg-white shadow-smw">
       {splittedMenu.map((item, index) => (
         <div className="flex flex-row min-w-full" key={index}>
           {item.map(({ icon: Icon, key }) => (

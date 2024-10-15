@@ -57,6 +57,8 @@ const config = {
       height: {
         100: "100px",
         mobile: "760px",
+        "50%-w-mobile": "206px",
+        "70%-w-mobile": "288.4px"
       },
       width: {
         mobile: "412px",
