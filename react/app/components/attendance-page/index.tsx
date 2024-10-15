@@ -31,7 +31,9 @@ export default function AttendanceView({
     not_sure: text.sayaMasihRagu,
   };
 
-  const { control, handleSubmit } = useForm<AttendanceModel>({
+  const { control, handleSubmit } = useForm<
+    AttendanceModel & { message: string }
+  >({
     defaultValues: {
       attendance: "attend",
       name,
@@ -118,7 +120,7 @@ export default function AttendanceView({
           onClick={() => {
             handleSubmit(async (value) => {
               if (!value.message) return;
-              await trigger({ ...value, message: undefined });
+              await trigger({ ...value });
               await triggerGreeting({
                 message: value.message,
                 name: value.name,
