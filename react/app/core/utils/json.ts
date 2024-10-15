@@ -6,7 +6,7 @@ import { promises as fs } from "fs"
 export default class JsonUtil<T,> {
   path: string;
   constructor(filename: string) {
-    this.path = `${process.cwd()}/${filename}.json`;
+    this.path = `${process.cwd()}/database/${filename}.json`;
   }
 
 
