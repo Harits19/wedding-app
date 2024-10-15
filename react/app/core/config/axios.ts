@@ -7,7 +7,7 @@ export function useCatchError() {
   const { toast } = useToast();
 
   return {
-    handleError: (error: unknown) => {
+    handleError: (error: any) => {
       if (error instanceof AxiosError) {
         toast({
           title: "AxiosError",
@@ -16,7 +16,14 @@ export function useCatchError() {
         return;
       }
 
+      const message = `${error?.message || "Unexpected error"}`;
+
       console.error("Unexpected Error : ", error);
+
+      toast({
+        title: 'Unexpected Error',
+        description: message,
+      })
     },
   };
 }
@@ -28,7 +35,7 @@ export function useAxios() {
     params: AxiosRequestConfig<Data>,
   ) => {
     const instance = axios.create();
-    const baseURL = `${kEnv.NEXT_PUBLIC_APP_HOST}:${kEnv.NEXT_PUBLIC_APP_PORT}`;
+    const baseURL = kEnv.NEXT_PUBLIC_USE_NEXT_JS_API_ROUTE ? '/api' : `${kEnv.NEXT_PUBLIC_APP_HOST}:${kEnv.NEXT_PUBLIC_APP_PORT}`;
     try {
       const result = await instance<Response>({
         ...params,
