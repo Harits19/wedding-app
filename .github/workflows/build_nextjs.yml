@@ -58,4 +58,6 @@ jobs:
             npm install pm2 -g
             pm2 del all
             pm2 start npm --name nextjs -- start --
+            sudo ufw allow 80
+            sudo ufw reload
 
