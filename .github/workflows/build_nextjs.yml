@@ -40,6 +40,18 @@ jobs:
             touch .env
             echo "${{ secrets.ENV_REACT }}" >> .env
 
+            if [ -d database ]; then
+              echo "database folder already exist"
+            else
+              echo "start create local database folder"
+              mkdir -p database
+              cd database
+              touch attendance.json greeting.json whitelist.json
+              echo "[]" >> *.json
+            fi
+            
+            cd ..
+
             npm install next
             npm run build
 
