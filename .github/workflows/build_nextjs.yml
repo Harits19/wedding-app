@@ -48,9 +48,8 @@ jobs:
               cd database
               touch attendance.json greeting.json whitelist.json
               echo "[]" >> *.json
+              cd ..
             fi
-            
-            cd ..
 
             npm install next
             npm run build
