@@ -9,3 +9,4 @@ react/node_modules/*
 *.crt
 express/coverage/*
 .env.prod
+react/database/*
