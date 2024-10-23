@@ -42,13 +42,13 @@ export default function GalleryPage() {
   }) => {
     return (
       <div
-        className={`flex flex-row  w-mobile h-70%-w-mobile px-2 gap-x-2 ${align === "right" ? "flex-row-reverse" : ""}`}
+        className={`flex flex-row  w-full h-[288.4px] px-2 gap-x-2 ${align === "right" ? "flex-row-reverse" : ""}`}
       >
         <div className="flex flex-col h-full  w-1/3 gap-y-2">
           <Image3 image={images.at(0)} />
           <Image3 image={images.at(1)} />
         </div>
-        <div className="flex h-full relative  w-2/3">
+        <div className="flex h-full relative  w-2/3 items-center  ">
           <ImageFull image={images.at(2)} />
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function GalleryPage() {
           <div className="font-bold not-italic">Habib Umar bin Hafidz</div>
         </div>
         <div className="h-4" />
-        <div className="bg-white py-10 bg-opacity-50 border-2 border-white ">
+        <div className="bg-white py-10 bg-opacity-50 border-2 border-white w-full ">
           <div className="h-4" />
           {/* Row1 */}
           <Row1
@@ -78,7 +78,7 @@ export default function GalleryPage() {
           />
           <div className="h-4" />
           {/* Row2 */}
-          <div className="flex flex-row w-mobile h-50%-w-mobile px-4 gap-x-2">
+          <div className="flex flex-row w-full h-[206px] px-4 gap-x-2">
             <Image4 image={kPublic.gallery4} />
             <Image4 image={kPublic.gallery5} />
           </div>
