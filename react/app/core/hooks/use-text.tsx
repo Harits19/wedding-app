@@ -31,7 +31,7 @@ export const useText = () => {
     akad: {
       title: "Akad Nikah",
       date: akadDateFormated,
-      time: "10.00 - Selesai",
+      time: "08.00 - Selesai",
       location1: "Rumah Keluarga Perempuan",
       location2:
         "Jl. Simpati No.9, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",

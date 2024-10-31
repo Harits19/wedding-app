@@ -9,4 +9,5 @@ react/node_modules/*
 *.crt
 express/coverage/*
 .env.prod
-react/database/*
+react/database/attendance.json
+react/database/greeting.json
