@@ -5,11 +5,13 @@ import { useWeddingState } from "@/app/core/hooks/use-wedding-provider";
 import Image from "next/image";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import ButtonBrown from "../button-brown";
+import { useEventName } from "@/app/core/hooks/use-event-name";
 
 export default function CoverPage() {
   const { resepsiDate, ...text } = useText();
   const guest = useGuest();
   const { setShowCover, showCover } = useWeddingState();
+  const { isResepsi } = useEventName();
   const RenderName = ({ text }: { text: string }) => {
     return <span className="font-cardo text-3xl text-wed303333 ">{text}</span>;
   };
@@ -59,7 +61,9 @@ export default function CoverPage() {
       <Flower className="rotate-180 -mb-10 bottom-0" />
 
       <div className="absolute text-wedprimary-color top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center">
-        <div className="animate-top-bottom-fade flex flex-col items-center">
+        <div
+          className={`animate-top-bottom-fade flex ${isResepsi ? "flex-col-reverse" : "flex-col"} items-center `}
+        >
           <span className="font-arizona  text-xl">{text.theWeddingOf}</span>
           <RenderName text={text.brideName} />
           <div className="font-arizona text-[32px] -my-2">{text.and}</div>

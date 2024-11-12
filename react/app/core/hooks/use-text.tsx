@@ -22,17 +22,17 @@ export const useText = () => {
     resepsi: {
       title: "Resepsi",
       date: resepsiDateFormated,
-      time: "12.00 - Selesai",
+      time: "10.00 - 13.00 WIB",
       location1: "Kantri Resto",
       location2:
-        "Jl. Raya Singosari No.169, Pangetan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
+        "Jl. Raya Singosari No.169, Pagetan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
     },
     akad: {
       title: "Akad Nikah",
       date: akadDateFormated,
       time: "08.00 - Selesai",
-      location1: "Rumah Keluarga Perempuan",
+      location1: "Rumah Mempelai Perempuan",
       location2:
         "Jl. Simpati No.9, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/8QoZmuDKp2j473yu6",

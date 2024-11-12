@@ -46,15 +46,13 @@ export default function SchedulePage() {
         src={kPublic.sideFlower1}
       />
 
+      <div className="h-2" />
+      <div className={`text-[${bigFont ? 14 : 12}px]`}>{text.bertempatDi}</div>
+      <div className={`text-[${bigFont ? 16 : 14}px] font-bold`}>
+        {location1}
+      </div>
       {showLocation && (
         <>
-          <div className="h-2" />
-          <div className={`text-[${bigFont ? 14 : 12}px]`}>
-            {text.bertempatDi}
-          </div>
-          <div className={`text-[${bigFont ? 16 : 14}px] font-bold`}>
-            {location1}
-          </div>
           <div className={`text-[${bigFont ? 14 : 12}px]`}>{location2}</div>
           <div className="h-2" />
           <div
