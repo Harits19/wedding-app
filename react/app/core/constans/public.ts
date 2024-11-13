@@ -7,7 +7,7 @@ export const kPublic = {
   flower4: "/images/flower4.png",
   flower5: "/images/flower5.png",
 
-  backgroundMusic: "/audio/background-music.webm",
+  backgroundMusic: "/audio/background-music.mp3",
   brideGroom1: kEnv.NEXT_PUBLIC_DEVELOPE_MODE
     ? "/images/bride-groom1-dummy.jpeg"
     : "/images/bride-groom1.jpeg",

@@ -108,7 +108,7 @@ export const useText = () => {
       time: "10.00 WIB - 13.00 WIB",
       location1: "Kantri Resto",
       location2:
-        "Jl. Raya Singosari No.169, Pagetan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
+        "Jl. Raya Singosari No.169, Pagentan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
       hidden: !isInvitedToResepsi,
       showLocation: isInvitedToResepsi,
