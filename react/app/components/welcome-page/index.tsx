@@ -1,7 +1,5 @@
 import { useText } from "@/app/core/hooks/use-text";
 import Background1 from "../background-1";
-import SmallButton from "../small-button";
-import { FaCalendar } from "react-icons/fa";
 import { useEffect, useMemo, useState } from "react";
 import { timeBetweenDates } from "@/app/core/utils/date-util";
 
@@ -26,9 +24,13 @@ export default function WelcomePage() {
   return (
     <Background1>
       <div className="text-wedprimary-color flex flex-col items-center text-center">
-        <div className="font-cardo  text-[20px] bg-white bg-opacity-90 border-2 border-white px-4 rounded-lg">{text.theWeddingOf}</div>
+        <div className="font-cardo  text-[20px] bg-white bg-opacity-90 border-2 border-white px-4 rounded-lg">
+          {text.theWeddingOf}
+        </div>
         <div className="h-8" />
-        <div className="font-italiana text-[40px] bg-white bg-opacity-90 border-2 border-white px-4 rounded-lg">{text.brideAndGroom}</div>
+        <div className="font-italiana text-[40px] bg-white bg-opacity-90 border-2 border-white px-4 rounded-lg">
+          {text.brideAndGroom}
+        </div>
         <div className="h-8" />
         <div className="flex flex-row items-center w-full font-cardo text-white gap-x-2 justify-center">
           {Object.entries(diff).map((item, index) => {
@@ -49,15 +51,6 @@ export default function WelcomePage() {
             );
           })}
         </div>
-        <div className="h-16" />
-        <SmallButton
-          className="bg-wedprimary-color"
-          icon={<FaCalendar />}
-          title={text.saveToCalendar}
-          onClick={() => {
-            window.open(text.googleCalendarLink);
-          }}
-        />
       </div>
     </Background1>
   );

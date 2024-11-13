@@ -95,9 +95,10 @@ export const useText = () => {
     waalaikumussalam: "Wassalamu’alaikum Wr. Wb.",
     kamiYangBerbahagia: "Kami Yang Berbahagia",
     madeWith: "Made With",
-    byBrideAndGroom: isInvitedToResepsi ?  " by Fia and Harits" : " by Harits and Fia",
-    googleCalendarLink:
-      "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
+    byBrideAndGroom: isInvitedToResepsi
+      ? " by Fia and Harits"
+      : " by Harits and Fia",
+
     saveToCalendar: "Save To Calendar",
     rawWeddingDate: akadDate,
     resepsiDate: resepsiDateFormated,
@@ -110,6 +111,9 @@ export const useText = () => {
         "Jl. Raya Singosari No.169, Pagetan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
       hidden: !isInvitedToResepsi,
+      showLocation: isInvitedToResepsi,
+      saveToCalendar:
+        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
     },
     akad: {
       title: "Akad Nikah",
@@ -120,6 +124,8 @@ export const useText = () => {
         "Jl. Simpati No.9, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/8QoZmuDKp2j473yu6",
       showLocation: isInvitedToAkad,
+      saveToCalendar:
+        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
     },
     ngunduhMantu: {
       title: "Ngunduh Mantu",
@@ -131,6 +137,8 @@ export const useText = () => {
       linkLocation: "https://maps.app.goo.gl/sJ2hiBUgWjXMYt3t7",
       hidden: !isInvitedToNgunduhMantu,
       showLocation: isInvitedToNgunduhMantu,
+      saveToCalendar:
+        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
     },
     selesai: "selesai",
     pukul: "Pukul",

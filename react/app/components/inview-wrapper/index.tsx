@@ -19,5 +19,5 @@ export function InViewWrapperV2({
   onChange?: (newValue: boolean) => void;
 }) {
   const { inView, ref } = useInView({ onChange });
-  return <div ref={ref} {...props} key={`${inView}-${props.key}`} />;
+  return <div className={`${inView ? '': 'opacity-0'}`} ref={ref} {...props} key={`${inView}-${props.key}`} />;
 }

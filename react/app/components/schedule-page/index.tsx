@@ -1,9 +1,10 @@
 import { useText } from "@/app/core/hooks/use-text";
 import Background1 from "../background-1";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaCalendar, FaLocationArrow } from "react-icons/fa";
 import Card from "../card";
 import Image from "next/image";
 import { kPublic } from "@/app/core/constans/public";
+import { IconType } from "react-icons/lib";
 
 export default function SchedulePage() {
   const text = useText();
@@ -18,6 +19,7 @@ export default function SchedulePage() {
       linkLocation,
       showLocation,
       hidden,
+      saveToCalendar,
     },
     align = "left",
     bigFont = false,
@@ -31,10 +33,31 @@ export default function SchedulePage() {
       linkLocation: string;
       showLocation?: boolean;
       hidden?: boolean;
+      saveToCalendar?: string;
     };
     align?: "left" | "right";
     bigFont?: boolean;
   }) => {
+    const ButtonSchedule = ({
+      Icon,
+      text,
+      onClick,
+    }: {
+      Icon: IconType;
+      text: string;
+      onClick: () => void;
+    }) => {
+      return (
+        <button
+          onClick={onClick}
+          className="bg-wedprimary-color text-white rounded-md font-cardo text-[12px] items-center justify-center px-2 py-1 flex flex-row"
+        >
+          <Icon width={12} height={12} size={"12px"} />
+          <div className="w-2" />
+          <div>{text}</div>
+        </button>
+      );
+    };
     if (hidden) return;
     return (
       <Card background={kPublic.background3} align={align}>
@@ -62,20 +85,21 @@ export default function SchedulePage() {
           <>
             <div className={`text-[${bigFont ? 14 : 12}px]`}>{location2}</div>
             <div className="h-2" />
-            <div
-              className={`flex flex-row ${align === "left" ? "justify-start" : " justify-end"}`}
-            >
-              <button
-                onClick={() => {
-                  window.open(linkLocation);
-                }}
-                className="bg-wedprimary-color text-white rounded-md font-cardo text-[12px] items-center justify-center px-2 py-1 flex flex-row"
-              >
-                <FaLocationArrow width={12} height={12} size={"12px"} />
-                <div className="w-2" />
-                <div>{text.lihatLokasi + " " + title}</div>
-              </button>
-            </div>
+            <ButtonSchedule
+              Icon={FaLocationArrow}
+              text={`${text.lihatLokasi} ${title}`}
+              onClick={() => {
+                window.open(linkLocation);
+              }}
+            />
+            <div className="h-2" />
+            <ButtonSchedule
+              Icon={FaCalendar}
+              text={text.saveToCalendar}
+              onClick={() => {
+                window.open(saveToCalendar);
+              }}
+            />
           </>
         )}
       </Card>
