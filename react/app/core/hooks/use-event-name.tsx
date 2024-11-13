@@ -1,10 +1,9 @@
-import { kEnv } from "../constans/env";
+import { useGuest } from "./use-guest";
+import { useWhitelistFindByName } from "./use-whitelist";
 
 export const useEventName = () => {
-  const eventName = kEnv.NEXT_PUBLIC_EVENT_NAME;
+  const { rawName } = useGuest();
+  const { data } = useWhitelistFindByName(rawName);
 
-  return {
-    isResepsi: eventName === "resepsi",
-    isNgunduhMantu: eventName === "ngunduh-mantu",
-  };
+  return { ...(data?.data ?? {}) };
 };

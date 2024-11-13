@@ -2,6 +2,21 @@
   {
     "createdAt": "",
     "id": 1,
-    "name": "Harits"
+    "name": "Irwan",
+    "isInvitedToResepsi": true
+  },
+  {
+    "createdAt": "",
+    "id": 1,
+    "name": "Rahno Suharno",
+    "eventName": "resepsi",
+    "isInvitedToResepsi": true,
+    "isInvitedToAkad": true
+  },
+  {
+    "createdAt": "",
+    "id": 1,
+    "name": "Pandu",
+    "isInvitedToNgunduhMantu": true
   }
 ]

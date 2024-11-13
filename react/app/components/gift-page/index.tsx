@@ -87,7 +87,7 @@ export default function GiftPage() {
         {text.tanpaMengurangiRasaHormat}
       </InViewWrapper>
 
-      {[text.bank, text.bankFia].map((item) => (
+      {[text.bankFirstPerson, text.bankSecondPerson].map((item) => (
         <RenderCard key={item.noRekening} {...item} />
       ))}
 

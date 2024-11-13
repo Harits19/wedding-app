@@ -3,11 +3,9 @@ import Image from "next/image";
 import InViewWrapper from "../inview-wrapper";
 import Background2 from "../background-2";
 import { FaInstagram } from "react-icons/fa";
-import { useEventName } from "@/app/core/hooks/use-event-name";
 
 export default function IntroductionPage() {
   const text = useText();
-  const { isResepsi } = useEventName();
   const RenderCoupleName = ({
     value: { fullName, parentName, sonOrder, instagram, image },
   }: {
@@ -77,23 +75,19 @@ export default function IntroductionPage() {
         </div>
         <div className="h-4" />
 
-        <div
-          className={`w-full flex ${isResepsi ? "flex-col-reverse" : "flex-col"} items-center`}
-        >
-          <InViewWrapper className="animate-fade-in">
-            <RenderCoupleName value={text.groom} />
-          </InViewWrapper>
+        <InViewWrapper className="animate-fade-in">
+          <RenderCoupleName value={text.detailFirstPerson} />
+        </InViewWrapper>
 
-          <div className="my-4 flex flex-row font-bold text-[20px] w-[150px] justify-center items-center gap-x-2">
-            <Divider />
-            &
-            <Divider />
-          </div>
-
-          <InViewWrapper className="animate-fade-in">
-            <RenderCoupleName value={text.bride} />
-          </InViewWrapper>
+        <div className="my-4 flex flex-row font-bold text-[20px] w-[150px] justify-center items-center gap-x-2">
+          <Divider />
+          &
+          <Divider />
         </div>
+
+        <InViewWrapper className="animate-fade-in">
+          <RenderCoupleName value={text.detailSecondPerson} />
+        </InViewWrapper>
       </div>
     </Background2>
   );
