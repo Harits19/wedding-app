@@ -6,7 +6,6 @@ import {
   CarouselItem,
 } from "../ui/carousel";
 import Image from "next/image";
-import { FaCircle } from "react-icons/fa";
 import { cn } from "@/app/core/utils/utils";
 import ImageFull from "../image-full";
 

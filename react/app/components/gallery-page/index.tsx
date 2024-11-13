@@ -1,7 +1,6 @@
 import { useText } from "@/app/core/hooks/use-text";
 import Background2 from "../background-2";
 import InViewWrapper from "../inview-wrapper";
-import Image from "next/image";
 import { kPublic } from "@/app/core/constans/public";
 import { CarouselGallery } from "../carousel-gallery";
 import { useState } from "react";
