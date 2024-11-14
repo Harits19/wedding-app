@@ -15,8 +15,11 @@ export const useText = () => {
   const akadDateFormated = getFormatedDate(akadDate);
   const resepsiDateFormated = getFormatedDate(resepsiDate);
 
-  const { isInvitedToAkad, isInvitedToNgunduhMantu, isInvitedToResepsi } =
-    useEventName();
+  const {
+    isInvitedToAkad,
+    isInvitedToNgunduhMantu,
+    isInvitedToResepsi = true,
+  } = useEventName();
   const bride = "Fia";
   const groom = "Harits";
   const groomDetail = {
@@ -33,6 +36,19 @@ export const useText = () => {
     image: kPublic.brideIntroduction,
     sonOrder: "Putri kedua dari",
     parentName: "Bpk (Alm) H. Muhariyadi, S.T\ndan Ibu Romi Sumalia",
+  };
+
+  const groomBankAccount = {
+    bankName: "Mandiri",
+    noRekening: "1380020406778",
+    whatsapp: "6283840493135",
+    atasNama: "Abdullah Harits",
+  };
+  const brideBankAccount = {
+    bankName: "Mandiri",
+    noRekening: "1440022137928",
+    whatsapp: "6283840493135",
+    atasNama: "Mahardien Luthfiyah Nuradenia",
   };
 
   return {
@@ -74,18 +90,8 @@ export const useText = () => {
     alamatTerimaKado: "Perumahan Bekasi",
     whatsappPenerimaKado: "6283840493135",
     copyAlamat: "Copy Alamat",
-    bankFirstPerson: {
-      bankName: "Mandiri",
-      noRekening: "1380020406778",
-      whatsapp: "6283840493135",
-      atasNama: "Abdullah Harits",
-    },
-    bankSecondPerson: {
-      bankName: "Mandiri",
-      noRekening: "1440022137928",
-      whatsapp: "6283840493135",
-      atasNama: "Mahardien Luthfiyah Nuradenia",
-    },
+    bankFirstPerson: isInvitedToResepsi ? brideBankAccount : groomBankAccount,
+    bankSecondPerson: !isInvitedToResepsi ? groomBankAccount : brideBankAccount,
     whatsappConfirmationText:
       "Hai, Saya mau mengkonfirmasi pengiriman kado pernikahan berupa",
     uang: "uang",
@@ -108,7 +114,7 @@ export const useText = () => {
       time: "10.00 WIB - 13.00 WIB",
       location1: "Kantri Resto",
       location2:
-        "Jl. Raya Singosari No.169, Pagentan, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
+        "Jl. Raya Singosari No.169, Pagentan, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
       hidden: !isInvitedToResepsi,
       showLocation: isInvitedToResepsi,
