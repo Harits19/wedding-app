@@ -14,7 +14,7 @@ export default function Card({
   return (
     <div className=" mb-4 w-full border border-white p-2 shadow bg-white rounded-xl bg-opacity-50">
       <div
-        className={` w-full flex flex-col animate-flip-right-to-left overflow-hidden shadow-xl rounded-xl  font-poppins text-black `}
+        className={` w-full border border-wedprimary-color border-opacity-10 flex flex-col animate-flip-right-to-left overflow-hidden shadow-xl rounded-xl  font-poppins text-black `}
       >
         <InViewWrapper
           className={`w-full flex flex-col   ${align === "left" ? "items-start text-left" : "items-end text-right"}`}

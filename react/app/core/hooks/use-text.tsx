@@ -112,8 +112,7 @@ export const useText = () => {
       linkLocation: "https://maps.app.goo.gl/NJVFwKFWmPbARrWB8",
       hidden: !isInvitedToResepsi,
       showLocation: isInvitedToResepsi,
-      saveToCalendar:
-        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
+      saveToCalendar: "https://calendar.app.google/VKh2K3oCxaYdi1Zq7",
     },
     akad: {
       title: "Akad Nikah",
@@ -124,8 +123,7 @@ export const useText = () => {
         "Jl. Simpati No.9, Losari, Kec. Singosari, Kabupaten Malang, Jawa Timur 65153",
       linkLocation: "https://maps.app.goo.gl/8QoZmuDKp2j473yu6",
       showLocation: isInvitedToAkad,
-      saveToCalendar:
-        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
+      saveToCalendar: "https://calendar.app.google/CxkpJeS82WWUmaQ3A",
     },
     ngunduhMantu: {
       title: "Ngunduh Mantu",
@@ -137,8 +135,7 @@ export const useText = () => {
       linkLocation: "https://maps.app.goo.gl/sJ2hiBUgWjXMYt3t7",
       hidden: !isInvitedToNgunduhMantu,
       showLocation: isInvitedToNgunduhMantu,
-      saveToCalendar:
-        "https://calendar.google.com/calendar/u/0/r/eventedit/MXJ1MjkyYWpzM2Z1MG5jNGNtdmVqc2p1djMgaGFyaXRzLmFiZHVsbGFoMTlAbQ",
+      saveToCalendar: "https://calendar.app.google/iMHNXPuFizeJ12nx7",
     },
     selesai: "selesai",
     pukul: "Pukul",
