@@ -91,7 +91,7 @@ export const useText = () => {
     whatsappPenerimaKado: "6283840493135",
     copyAlamat: "Copy Alamat",
     bankFirstPerson: isInvitedToResepsi ? brideBankAccount : groomBankAccount,
-    bankSecondPerson: !isInvitedToResepsi ? groomBankAccount : brideBankAccount,
+    bankSecondPerson: !isInvitedToResepsi ? brideBankAccount : groomBankAccount,
     whatsappConfirmationText:
       "Hai, Saya mau mengkonfirmasi pengiriman kado pernikahan berupa",
     uang: "uang",
