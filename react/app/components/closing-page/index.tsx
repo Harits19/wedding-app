@@ -10,7 +10,7 @@ export default function ClosingPage() {
   return (
     <Background1>
       <div className="flex flex-col m-4 rounded-xl text-wed303333 items-center justify-center text-center  border border-white bg-white h-full -my-[240px] py-[160px] bg-opacity-70">
-        <div className=" font-cormorant italic ">
+        <div className=" font-cormorant italic px-2">
           {text.merupakanSuatuKebahagiaan}
         </div>
         <div className="h-2" />
