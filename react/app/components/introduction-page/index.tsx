@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 export default function IntroductionPage() {
   const text = useText();
   const RenderCoupleName = ({
-    value: { fullName, parentName, sonOrder, instagram, image },
+    value: { fullName, parentName, sonOrder, instagram, image, location },
   }: {
     value: {
       fullName: string;
@@ -15,6 +15,7 @@ export default function IntroductionPage() {
       parentName: string;
       instagram: string;
       image: string;
+      location: string;
     };
   }) => (
     <div className="flex flex-col items-center">
@@ -34,8 +35,11 @@ export default function IntroductionPage() {
       <div className="font-poppins">
         <div className="font-cardo text-[20px] font-bold">{fullName}</div>
         <div className="text-[16px] text-wedprimary-color">{sonOrder}</div>
-        <div className="text-[14px] font-cardo font-bold whitespace-pre-line">{parentName}</div>
-        <div className="h-2" />
+        <div className="text-[14px] font-cardo font-bold whitespace-pre-line">
+          {parentName}
+        </div>
+        <div className="">{location}</div>
+        <div className="h-4" />
         <div className="flex flex-row justify-center items-center ">
           <button
             onClick={() => {
