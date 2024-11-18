@@ -1,23 +1,230 @@
 [
   {
-    "createdAt": "",
-    "id": 1,
-    "name": "Irwan",
-    "isInvitedToResepsi": true
+    "name": "Arief",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
   },
   {
-    "createdAt": "",
-    "id": 1,
-    "name": "Rahno Suharno",
-    "eventName": "resepsi",
+    "name": "Asroru",
+    "isInvitedToAkad": false,
     "isInvitedToResepsi": true,
-    "isInvitedToAkad": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Hilmi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Irwan",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Khairi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Rizki Augusta",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Raden Abhista",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Reinaldi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Reza",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Kindi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Hawim",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Umi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Fitra",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Yufta",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Diva",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Ervina",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Rais Sulaiman",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": true,
+    "isInvitedToNgunduhMantu": false
+  },
+  {
+    "name": "Ammar Yazid",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
     "isInvitedToNgunduhMantu": true
   },
   {
-    "createdAt": "",
-    "id": 1,
+    "name": "Fatih",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Yahya",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Fahmi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
     "name": "Pandu",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Daniel",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Setyo",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Asep",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Iskandar",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Ariyadi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Nurul",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Ahkam",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Carlo",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Pahlevi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Afi",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Fina",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Atiqah",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Yunny",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Hamdani",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Rizki",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
+    "isInvitedToNgunduhMantu": true
+  },
+  {
+    "name": "Ramadhan Iqbal",
+    "isInvitedToAkad": false,
+    "isInvitedToResepsi": false,
     "isInvitedToNgunduhMantu": true
   }
 ]
