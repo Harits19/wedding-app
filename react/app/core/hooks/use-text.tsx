@@ -15,11 +15,8 @@ export const useText = () => {
   const akadDateFormated = getFormatedDate(akadDate);
   const resepsiDateFormated = getFormatedDate(resepsiDate);
 
-  const {
-    isInvitedToAkad,
-    isInvitedToNgunduhMantu,
-    isInvitedToResepsi = true,
-  } = useEventName();
+  const { isInvitedToAkad, isInvitedToNgunduhMantu, isInvitedToResepsi } =
+    useEventName();
   const bride = "Fia";
   const groom = "Harits";
   const groomDetail = {
@@ -29,7 +26,7 @@ export const useText = () => {
     image: kPublic.groomIntroduction,
     parentName:
       "Bpk. H. Wharnomo Fauzy, S.E., M.M\ndan Ibu Hj. Jatisari Rahmawati",
-    location: 'Prambanan - Klaten',
+    location: "Prambanan - Klaten",
   };
   const brideDetail = {
     fullName: "Mahardien Luthfiyah N, A.Md",
@@ -37,7 +34,7 @@ export const useText = () => {
     image: kPublic.brideIntroduction,
     sonOrder: "Putri kedua dari",
     parentName: "Bpk (Alm) H. Muhariyadi, S.T\ndan Ibu Romi Sumalia",
-    location: 'Singosari - Malang'
+    location: "Singosari - Malang",
   };
 
   const groomBankAccount = {
