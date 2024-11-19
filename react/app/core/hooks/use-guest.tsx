@@ -3,9 +3,17 @@ import lodash from "lodash";
 
 export const useGuest = () => {
   const param = useSearchParams();
-  const name = param.get("guest") ?? undefined;
+  const undanganAkadResepsi = param.get("guest") ?? undefined;
+  const undanganResepsi = param.get("tamu") ?? undefined;
+  const undanganNgunduhMantu = param.get("nama") ?? undefined;
+
+  const namaTamu =
+    undanganAkadResepsi || undanganResepsi || undanganNgunduhMantu;
   return {
-    name: lodash.capitalize(name ?? ""),
-    rawName: name,
+    name: lodash.capitalize(namaTamu),
+    rawName: namaTamu,
+    undanganAkadResepsi,
+    undanganNgunduhMantu,
+    undanganResepsi,
   };
 };

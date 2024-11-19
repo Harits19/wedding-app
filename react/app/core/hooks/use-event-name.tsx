@@ -1,9 +1,16 @@
 import { useGuest } from "./use-guest";
-import { useWhitelistFindByName } from "./use-whitelist";
 
 export const useEventName = () => {
-  const { rawName } = useGuest();
-  const { data } = useWhitelistFindByName(rawName);
+  const { undanganAkadResepsi, undanganNgunduhMantu, undanganResepsi } =
+    useGuest();
 
-  return { ...(data?.data ?? {}) };
+  const isInvitedToAkad = Boolean(undanganAkadResepsi),
+    isInvitedToResepsi = Boolean(undanganResepsi),
+    isInvitedToNgunduhMantu = Boolean(undanganNgunduhMantu);
+
+  return {
+    isInvitedToAkad,
+    isInvitedToResepsi: isInvitedToAkad ? isInvitedToAkad : isInvitedToResepsi,
+    isInvitedToNgunduhMantu,
+  };
 };

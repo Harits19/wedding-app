@@ -10,7 +10,7 @@ export default function ManageWhitelistModal({
   showModal,
   setShowModal,
 }: {
-  item?: { id: number; name?: string };
+  item?: WhitelistModel;
   showModal: boolean;
   // eslint-disable-next-line no-unused-vars
   setShowModal: (value: boolean) => void;
