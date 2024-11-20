@@ -5,11 +5,13 @@ import { useWeddingState } from "@/app/core/hooks/use-wedding-provider";
 import Image from "next/image";
 import { FaRegEnvelopeOpen } from "react-icons/fa";
 import ButtonBrown from "../button-brown";
+import { useEventName } from "@/app/core/hooks/use-event-name";
 
 export default function CoverPage() {
-  const { resepsiDate, ...text } = useText();
+  const { resepsiDate, ngunduhMantuDate, ...text } = useText();
   const guest = useGuest();
   const { setShowCover, showCover } = useWeddingState();
+  const { isInvitedToResepsi, isInvitedToNgunduhMantu } = useEventName();
   const RenderName = ({ text }: { text: string }) => {
     return <span className="font-cardo text-3xl text-wed303333 ">{text}</span>;
   };
@@ -66,7 +68,17 @@ export default function CoverPage() {
           <RenderName text={text.name2} />
         </div>
 
-        <div className=" animate-fade-in my-6">{resepsiDate}</div>
+
+        {isInvitedToResepsi && (
+          <div className=" animate-fade-in mt-6">{resepsiDate}</div>
+        )}
+        {isInvitedToNgunduhMantu && (
+          <>
+            &<div className=" animate-fade-in">{ngunduhMantuDate}</div>
+          </>
+        )}
+
+        <div className="h-6" />
 
         <div className="animate-bottom-top-fade flex flex-col items-center">
           <div className="animate-fade-in-bottom-top">{text.kepadaYth}</div>

@@ -14,6 +14,7 @@ export const useText = () => {
     moment(date).locale("id").format("dddd, DD MMMM YYYY");
   const akadDateFormated = getFormatedDate(akadDate);
   const resepsiDateFormated = getFormatedDate(resepsiDate);
+  const ngunduhMantuDateFormated = getFormatedDate(ngunduhMantuDate);
 
   const { isInvitedToAkad, isInvitedToNgunduhMantu, isInvitedToResepsi } =
     useEventName();
@@ -25,7 +26,7 @@ export const useText = () => {
     sonOrder: "Putra kedua dari",
     image: kPublic.groomIntroduction,
     parentName:
-      "Bpk. H. Wharnomo Fauzy, S.E., M.M\ndan Ibu Hj. Jatisari Rahmawati",
+      "Bpk. H. Wharnomo Fauzy, S.E., M.M\n&\n Ibu Hj. Jatisari Rahmawati",
     location: "Prambanan - Klaten",
   };
   const brideDetail = {
@@ -33,7 +34,7 @@ export const useText = () => {
     instagram: "lthfyh_",
     image: kPublic.brideIntroduction,
     sonOrder: "Putri kedua dari",
-    parentName: "Bpk (Alm) H. Muhariyadi, S.T\ndan Ibu Romi Sumalia",
+    parentName: "Bpk (Alm) H. Muhariyadi, S.T\n&\n Ibu Romi Sumalia",
     location: "Singosari - Malang",
   };
 
@@ -106,7 +107,9 @@ export const useText = () => {
 
     saveToCalendar: "Save To Calendar",
     rawWeddingDate: akadDate,
+    rawNgunduhMantuDate: ngunduhMantuDate,
     resepsiDate: resepsiDateFormated,
+    ngunduhMantuDate: ngunduhMantuDateFormated,
     resepsi: {
       title: "Resepsi",
       date: resepsiDateFormated,

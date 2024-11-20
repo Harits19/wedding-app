@@ -1,25 +1,11 @@
 import { useText } from "@/app/core/hooks/use-text";
 import Background1 from "../background-1";
-import { useEffect, useMemo, useState } from "react";
-import { timeBetweenDates } from "@/app/core/utils/date-util";
+import CountdownView from "../countdown-view";
+import { useEventName } from "@/app/core/hooks/use-event-name";
 
 export default function WelcomePage() {
-  const text = useText();
-
-  const date = useMemo(() => {
-    return text.rawWeddingDate;
-  }, [text.rawWeddingDate]);
-  const [diff, setDiff] = useState(timeBetweenDates(date));
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setDiff(timeBetweenDates(date));
-    }, 1000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [date]);
+  const { rawWeddingDate, rawNgunduhMantuDate, ...text } = useText();
+  const { isInvitedToNgunduhMantu, isInvitedToResepsi } = useEventName();
 
   return (
     <Background1>
@@ -32,25 +18,12 @@ export default function WelcomePage() {
           {text.brideAndGroom}
         </div>
         <div className="h-8" />
-        <div className="flex flex-row items-center w-full font-cardo text-white gap-x-2 justify-center">
-          {Object.entries(diff).map((item, index) => {
-            const title = {
-              hours: "Jam",
-              seconds: "Detik",
-              days: "Hari",
-              minutes: "Menit",
-            }[item[0]];
-            return (
-              <div
-                key={index}
-                className="bg-wedprimary-color flex flex-col w-16 h-16 justify-center items-center rounded-md"
-              >
-                <div>{item[1]}</div>
-                <div>{title}</div>
-              </div>
-            );
-          })}
-        </div>
+        {isInvitedToResepsi && (
+          <CountdownView date={rawWeddingDate} title="Resepsi" />
+        )}
+        {isInvitedToNgunduhMantu && (
+          <CountdownView date={rawNgunduhMantuDate} title="Ngunduh Mantu" />
+        )}
       </div>
     </Background1>
   );
