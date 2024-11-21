@@ -68,14 +68,11 @@ export default function CoverPage() {
           <RenderName text={text.name2} />
         </div>
 
-
         {isInvitedToResepsi && (
           <div className=" animate-fade-in mt-6">{resepsiDate}</div>
         )}
         {isInvitedToNgunduhMantu && (
-          <>
-            &<div className=" animate-fade-in">{ngunduhMantuDate}</div>
-          </>
+          <div className=" animate-fade-in">{ngunduhMantuDate}</div>
         )}
 
         <div className="h-6" />
