@@ -21,7 +21,7 @@ export const useText = () => {
   const bride = "Fia";
   const groom = "Harits";
   const groomDetail = {
-    fullName: "Abdullah Harits S.Kom",
+    fullName: "Abdullah Harits, S.Kom",
     instagram: "abd.harits19",
     sonOrder: "Putra kedua dari",
     image: kPublic.groomIntroduction,
