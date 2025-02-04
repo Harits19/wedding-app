@@ -32,18 +32,9 @@ export const useGetAndPostMethod = <
       method: "GET",
     }).then((value) => value?.data);
   });
-
-  const del = useSWRMutation(url, function (_, { arg }: { arg: BaseModel }) {
-    if (!arg.id) throw Error("Empty id");
-    return fetch({
-      url: `${url}/${arg.id}`,
-      method: "DELETE",
-    });
-  });
-
+  
   return {
     post,
     get,
-    del,
   };
 };

@@ -1,7 +1,6 @@
 import { useToast } from "@/app/components/ui/use-toast";
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import { useTokenState } from "../hooks/use-token";
-import { kEnv } from "../constans/env";
 
 export function useCatchError() {
   const { toast } = useToast();
