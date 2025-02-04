@@ -33,7 +33,7 @@ export const kPublic = (() => {
   };
 
   type PublicKey = keyof typeof publicPath;
-  const basePath = kEnv.NEXT_PUBLIC_APP_BASE_PATH;
+  const basePath = kEnv.NEXT_PUBLIC_APP_GITHUB_PAGE_BASE_PATH;
   if (basePath) {
     for (const [key, value] of Object.entries(publicPath)) {
       publicPath[key as PublicKey] = `${basePath}${value}`;

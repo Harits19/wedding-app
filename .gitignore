@@ -1,5 +1,5 @@
 node_modules/*
-.env
 database/attendance.json
 database/greeting.json
-.next/*
+.next
+out

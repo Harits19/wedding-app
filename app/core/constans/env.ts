@@ -2,7 +2,7 @@ export const kEnv = (() => {
   const env = {
     NEXT_PUBLIC_APP_HOST: process.env.NEXT_PUBLIC_APP_HOST,
     NEXT_PUBLIC_APP_PORT: process.env.NEXT_PUBLIC_APP_PORT,
-    NEXT_PUBLIC_APP_BASE_PATH: process.env.NEXT_PUBLIC_APP_BASE_PATH,
+    NEXT_PUBLIC_APP_GITHUB_PAGE_BASE_PATH: process.env.NEXT_PUBLIC_APP_GITHUB_PAGE_BASE_PATH,
   };
 
   const emptyKey = Object.entries(env).filter((key) => {

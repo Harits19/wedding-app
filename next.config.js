@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NEXT_PUBLIC_APP_GITHUB_PAGE_BASE_PATH;
 const nextConfig = {
-  output: "export",
-  basePath: process.env.NEXT_PUBLIC_APP_BASE_PATH,
+  output: basePath ? "export" : undefined,
+  basePath,
   images: {
     unoptimized: true,
     remotePatterns: [
